@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "monailabelexploration"
+version = "0.1.0"
+description = ""
+authors = ["Benjamin Bearce <bbearce@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+monailabel = "^0.7.0"
+pandas = "^2.1.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
