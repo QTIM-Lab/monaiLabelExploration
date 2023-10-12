@@ -19,17 +19,20 @@ pip install monailabel
 # Download Sample Apps
 monailabel apps # List sample apps
 monailabel apps --download --name radiology --output apps
+# monailabel apps --download --name pathology --output apps
 
 # Download MSD Datasets
 monailabel datasets # List sample datasets
 monailabel datasets --download --name Task09_Spleen --output datasets
+monailabel datasets --download --name Task01_BrainTumour --output datasets
 
 # Run Deepedit Model.
 # Options can be (deepedit|deepgrow|segmentation|segmentation_spleen|all) in case of radiology app.
 # You can also pass comma separated models like --conf models deepedit,segmentation
 
 # monailabel start_server --app apps/radiology --studies datasets/Task09_Spleen/imagesTr --conf models all
-monailabel start_server --app apps/radiology --studies datasets/Task09_Spleen/imagesTr --conf models deepedit
+# monailabel start_server --app apps/radiology --studies datasets/Task09_Spleen/imagesTr --conf models deepedit
+monailabel start_server --app apps/radiology --studies datasets/Task01_BrainTumour/imagesTr --conf models deepedit
 ```
 
 ![server_running](server_running.jpg)
@@ -44,15 +47,25 @@ Use http://<>:<>/#/ to explore the api and generate curl commands in the correct
 
 #### Client Init
 ```bash
-curl -X 'GET' \
+**curl -X 'GET' \
   'http://0.0.0.0:8000/info/' \
+  -H 'accept: application/json'**
+```
+
+#### Get Images
+```bash
+curl -X 'GET' \
+  'http://0.0.0.0:8000/datastore/?output=stats' \
   -H 'accept: application/json'
 ```
 
 #### Next Image Selection
 ```bash
-
-
+curl -X 'POST' \
+  'http://0.0.0.0:8000/activelearning/random' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{}'
 ```
 
 #### Inference
