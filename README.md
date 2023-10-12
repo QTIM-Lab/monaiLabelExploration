@@ -47,19 +47,19 @@ Use http://<>:<>/#/ to explore the api and generate curl commands in the correct
 
 #### Client Init
 ```bash
-**curl -X 'GET' \
+curl -X 'GET' \
   'http://0.0.0.0:8000/info/' \
-  -H 'accept: application/json'**
+  -H 'accept: application/json'
 ```
 
 #### Get Images
 ```bash
 curl -X 'GET' \
-  'http://0.0.0.0:8000/datastore/?output=stats' \
+  'http://0.0.0.0:8000/datastore/?output=all' \
   -H 'accept: application/json'
 ```
 
-#### Next Image Selection
+#### Next Image Selection (Not finalized)
 ```bash
 curl -X 'POST' \
   'http://0.0.0.0:8000/activelearning/random' \
@@ -70,8 +70,27 @@ curl -X 'POST' \
 
 #### Inference
 ```bash
+# Works for 2D and 3D, though for 2D we used Brain Mets and the model is for general organs
+# I believe when you look at the segmentation that is why it looks "strange"
 
+# 2D (See test_requests.py for conversion of 3D *.nii.gz to 2D *.nii.gz)
+curl -X 'POST' \
+  'http://0.0.0.0:8000/infer/deepedit?output=image' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: multipart/form-data' \
+  -F 'params={}' \
+  -F 'file=@datasets/Task01_BrainTumour/imagesTs/BRATS_485_slice-60.nii.gz;type=application/gzip' \
+  -o TEMP_DATA/BRATS_485_slice_60_segmentation.nii.gz
 
+# 3D Works with BRATS nii.gz images as is because they are 3D already
+## datasets/Task01_BrainTumour/labelsTr/BRATS_485.nii.gz DID NOT EXIST ORIGINALLY!!!
+curl -X 'POST' \
+  'http://0.0.0.0:8000/infer/deepedit?output=image' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: multipart/form-data' \
+  -F 'params={}' \
+  -F 'file=@datasets/Task01_BrainTumour/imagesTs/BRATS_485.nii.gz;type=application/gzip' \
+  -o TEMP_DATA/BRATS_485_Segmentation.nii.gz
 ```
 
 #### Submit Final Label
