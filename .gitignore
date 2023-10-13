@@ -1,11 +1,10 @@
 # Cache
 __pycache__/
 
-datasets/
+datastore/
 .env
 
-
-tutorials/MedNIST/
+tutorials/
 
 # Models
 *.pt
@@ -14,3 +13,7 @@ tutorials/MedNIST/
 # Images
 *.jpg
 *.tar.gz
+*.jpeg
+
+apps/radiology/logs/
+apps/radiology/model/

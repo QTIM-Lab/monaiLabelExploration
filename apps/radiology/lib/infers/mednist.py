@@ -65,8 +65,7 @@ class Mednist(BasicInferTask):
 
     def pre_transforms(self, data=None):
         t = []
-        add_cache = False # may not be used
-
+        # add_cache = False # may not be used
         t.extend(
             [
                 LoadImaged(keys="image", image_only=True),

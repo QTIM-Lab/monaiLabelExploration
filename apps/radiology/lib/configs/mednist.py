@@ -58,14 +58,14 @@ class Mednist(TaskConfig):
         # }
 
         # Number of input channels - 4 for BRATS and 1 for spleen
-        self.number_intensity_ch = 1
+        # self.number_intensity_ch = 1
 
 
 
         # Model Files
         self.path = [
             os.path.join(self.model_dir, f"pretrained_{self.name}.pt"),  # pretrained
-            # os.path.join(self.model_dir, f"{self.name}_{network}.pt"),  # published
+            os.path.join(self.model_dir, f"{self.name}_working.pt"),  # published
         ]
 
         # Download PreTrained Model
@@ -150,10 +150,22 @@ class Mednist(TaskConfig):
                 # preload=strtobool(self.conf.get("preload", "false")),
                 # spatial_size=self.spatial_size,
                 # target_spacing=self.target_spacing,
-                config={"cache_transforms": True, "cache_transforms_in_memory": True, "cache_transforms_ttl": 300},
+                # config={"cache_transforms": True, "cache_transforms_in_memory": True, "cache_transforms_ttl": 300},
             )
 
     def trainer(self) -> Optional[TrainTask]:
+        output_dir = os.path.join(self.model_dir, self.name)
+        load_path = self.path[0] if os.path.exists(self.path[0]) else self.path[1]
+
+        task: TrainTask = lib.trainers.Mednist(
+            model_dir=output_dir,
+            network=self.network,
+            load_path=load_path,
+            publish_path=self.path[1],
+            description="Train mednist classifier",
+            labels=self.labels,
+        )
+        return task
         # output_dir = os.path.join(self.model_dir, f"{self.name}_" + self.conf.get("network", "dynunet"))
         # load_path = self.path[0] if os.path.exists(self.path[0]) else self.path[1]
         # task: TrainTask = lib.trainers.DeepEdit(
@@ -170,7 +182,7 @@ class Mednist(TaskConfig):
         #     find_unused_parameters=True,
         # )
         # return task
-        return None
+        # return None
 
     # def strategy(self) -> Union[None, Strategy, Dict[str, Strategy]]:
     #     strategies: Dict[str, Strategy] = {}

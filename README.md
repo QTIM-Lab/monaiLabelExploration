@@ -32,7 +32,7 @@ monailabel datasets --download --name Task01_BrainTumour --output datasets
 
 # monailabel start_server --app apps/radiology --studies datasets/Task09_Spleen/imagesTr --conf models all
 # monailabel start_server --app apps/radiology --studies datasets/Task09_Spleen/imagesTr --conf models deepedit
-monailabel start_server --app apps/radiology --studies datasets/Task01_BrainTumour/imagesTr --conf models deepedit
+monailabel start_server --app apps/radiology --studies datastore --conf models mednist
 ```
 
 ![server_running](server_running.jpg)
