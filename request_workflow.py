@@ -4,7 +4,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 SERVER=os.environ.get('server')
-SERVER="localhost"
 PORT=os.environ.get('port')
 base_url = f"http://{SERVER}:{PORT}/"
 
