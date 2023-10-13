@@ -1,0 +1,26 @@
+
+imports: 
+- $import scripts
+
+max_items_to_print: 10
+
+ckpt_file: ""
+
+testdata:
+  _target_: MedNISTDataset
+  root_dir: '@root_dir'
+  transform: '@transform'
+  section: test
+  download: false
+  runtime_cache: true
+
+eval_dl:
+  _target_: DataLoader
+  dataset: '$@testdata[:@max_items_to_print]'
+  batch_size: 1
+  num_workers: 0
+
+# loads the weights from the given file (which needs to be set on the command line) then calls "evaluate"
+evaluate:
+- '$@net.load_state_dict(torch.load(@ckpt_file))'
+- '$scripts.evaluate(@net, @eval_dl, @class_names, @device)'

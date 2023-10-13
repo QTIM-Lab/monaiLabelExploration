@@ -1,3 +1,16 @@
-apps/
+# Cache
+__pycache__/
+
 datasets/
 .env
+
+
+tutorials/MedNIST/
+
+# Models
+*.pt
+*.ts
+
+# Images
+*.jpg
+*.tar.gz

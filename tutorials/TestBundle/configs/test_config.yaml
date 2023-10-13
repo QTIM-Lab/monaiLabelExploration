@@ -1,0 +1,13 @@
+imports: 
+- $import torch
+- $import monai
+
+device: $torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+
+shape: [4, 4]
+
+test_tensor: '$torch.rand(*@shape).to(@device)'
+
+test_config:
+- '$monai.config.print_config()'
+- '$print("Test tensor:", @test_tensor)'

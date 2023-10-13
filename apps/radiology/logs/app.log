@@ -1,0 +1,1158 @@
+[2023-10-11 18:12:05,362] [265956] [MainThread] [INFO] (monailabel.interfaces.utils.app:37) - Initializing App from: /home/bbearce/Documents/monaiLabelExploration/apps/radiology; studies: /home/bbearce/Documents/monaiLabelExploration/datasets/Task09_Spleen/imagesTr; conf: {'models': 'deepedit'}
+[2023-10-11 18:12:08,581] [265956] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for MONAILabelApp Found: <class 'main.MyApp'>
+[2023-10-11 18:12:08,604] [265956] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_spleen.SegmentationSpleen'>
+[2023-10-11 18:12:08,605] [265956] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_vertebra.LocalizationVertebra'>
+[2023-10-11 18:12:08,607] [265956] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_2d.Deepgrow2D'>
+[2023-10-11 18:12:08,609] [265956] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_spine.LocalizationSpine'>
+[2023-10-11 18:12:08,611] [265956] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepedit.DeepEdit'>
+[2023-10-11 18:12:08,612] [265956] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_3d.Deepgrow3D'>
+[2023-10-11 18:12:08,614] [265956] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation.Segmentation'>
+[2023-10-11 18:12:08,615] [265956] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_vertebra.SegmentationVertebra'>
+[2023-10-11 18:12:08,616] [265956] [MainThread] [INFO] (main:93) - +++ Adding Model: deepedit => lib.configs.deepedit.DeepEdit
+[2023-10-11 18:12:08,616] [265956] [MainThread] [INFO] (monailabel.utils.others.generic:186) - Downloading resource: /home/bbearce/Documents/monaiLabelExploration/apps/radiology/model/pretrained_deepedit_dynunet.pt from https://github.com/Project-MONAI/MONAILabel/releases/download/pretrained/radiology_deepedit_dynunet_multilabel.pt
+[2023-10-11 18:13:24,668] [265956] [MainThread] [INFO] (lib.configs.deepedit:141) - EPISTEMIC Enabled: False; Samples: 5
+[2023-10-11 18:13:24,668] [265956] [MainThread] [INFO] (main:96) - +++ Using Models: ['deepedit']
+[2023-10-11 18:13:24,668] [265956] [MainThread] [INFO] (monailabel.interfaces.app:135) - Init Datastore for: /home/bbearce/Documents/monaiLabelExploration/datasets/Task09_Spleen/imagesTr
+[2023-10-11 18:13:24,669] [265956] [MainThread] [INFO] (monailabel.datastore.local:130) - Auto Reload: True; Extensions: ['*.nii.gz', '*.nii', '*.nrrd', '*.jpg', '*.png', '*.tif', '*.svs', '*.xml']
+[2023-10-11 18:13:24,671] [265956] [MainThread] [INFO] (monailabel.datastore.local:577) - Invalidate count: 0
+[2023-10-11 18:13:24,671] [265956] [MainThread] [INFO] (monailabel.datastore.local:151) - Start observing external modifications on datastore (AUTO RELOAD)
+[2023-10-11 18:13:25,288] [265956] [MainThread] [INFO] (main:126) - +++ Adding Inferer:: deepedit => <lib.infers.deepedit.DeepEdit object at 0x7fe989b69cf0>
+[2023-10-11 18:13:25,288] [265956] [MainThread] [INFO] (main:126) - +++ Adding Inferer:: deepedit_seg => <lib.infers.deepedit.DeepEdit object at 0x7fe989b85150>
+[2023-10-11 18:13:25,289] [265956] [MainThread] [INFO] (main:191) - {'deepedit': <lib.infers.deepedit.DeepEdit object at 0x7fe989b69cf0>, 'deepedit_seg': <lib.infers.deepedit.DeepEdit object at 0x7fe989b85150>, 'Histogram+GraphCut': <monailabel.scribbles.infer.HistogramBasedGraphCut object at 0x7fe989b850f0>, 'GMM+GraphCut': <monailabel.scribbles.infer.GMMBasedGraphCut object at 0x7fe989b850c0>}
+[2023-10-11 18:13:25,289] [265956] [MainThread] [INFO] (main:206) - +++ Adding Trainer:: deepedit => <lib.trainers.deepedit.DeepEdit object at 0x7fe989b85030>
+[2023-10-11 18:13:25,290] [265956] [MainThread] [INFO] (monailabel.utils.sessions:51) - Session Path: /home/bbearce/.cache/monailabel/sessions
+[2023-10-11 18:13:25,291] [265956] [MainThread] [INFO] (monailabel.utils.sessions:52) - Session Expiry (max): 3600
+[2023-10-11 18:13:25,291] [265956] [MainThread] [INFO] (monailabel.interfaces.app:469) - App Init - completed
+[2023-10-11 18:13:25,292] [265956] [MainThread] [INFO] (timeloop:60) - Starting Timeloop..
+[2023-10-11 18:13:25,293] [265956] [MainThread] [INFO] (timeloop:42) - Registered job <function MONAILabelApp.on_init_complete.<locals>.run_scheduler at 0x7fe989bb4a60>
+[2023-10-11 18:13:25,293] [265956] [MainThread] [INFO] (timeloop:63) - Timeloop now started. Jobs will run based on the interval set
+[2023-10-11 18:14:35,491] [265956] [MainThread] [INFO] (monailabel.endpoints.activelearning:44) - Active Learning Request: {'strategy': 'random'}
+[2023-10-11 18:14:49,786] [265956] [MainThread] [INFO] (monailabel.endpoints.activelearning:44) - Active Learning Request: {'strategy': 'random'}
+[2023-10-11 23:40:27,958] [265956] [MainThread] [INFO] (monailabel.endpoints.activelearning:44) - Active Learning Request: {'strategy': 'random'}
+[2023-10-12 00:09:05,463] [265956] [MainThread] [INFO] (monailabel.endpoints.infer:161) - Infer Request: {'model': 'deepedit', 'image': 'spleen_1'}
+[2023-10-12 00:09:05,474] [265956] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:277) - Infer Request (final): {'cache_transforms': True, 'cache_transforms_in_memory': True, 'cache_transforms_ttl': 300, 'device': 'cpu', 'model': 'deepedit', 'image': '', 'description': 'A DeepEdit model for volumetric (3D) segmentation over 3D Images'}
+[2023-10-12 00:09:05,477] [265956] [MainThread] [INFO] (monailabel.utils.sessions:51) - Session Path: /home/bbearce/.cache/monailabel/cacheT
+[2023-10-12 00:09:05,477] [265956] [MainThread] [INFO] (monailabel.utils.sessions:52) - Session Expiry (max): 600
+[2023-10-12 00:09:05,480] [265956] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - PRE - Run Transform(s)
+[2023-10-12 00:09:05,480] [265956] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - PRE - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'image_path']
+[2023-10-12 00:09:05,481] [265956] [MainThread] [INFO] (monailabel.transform.cache:80) - Ignore; Failed to load image from Cache; memory:True
+[2023-10-12 00:09:05,481] [265956] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (LoadFromCache): Time: 0.0005; 
+[2023-10-12 00:09:05,482] [265956] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - PRE - Run Transform(s)
+[2023-10-12 00:09:05,483] [265956] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - PRE - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'image_path']
+[2023-10-12 00:09:09,316] [265956] [MainThread] [INFO] (LoadImage:271) - ITKReader: unable to load ('.',).
+
+[2023-10-12 00:09:09,317] [265956] [MainThread] [INFO] (LoadImage:271) - NibabelReader: unable to load ('.',).
+
+[2023-10-12 00:09:09,318] [265956] [MainThread] [INFO] (LoadImage:271) - PILReader: unable to load ('.',).
+
+[2023-10-12 00:09:09,320] [265956] [MainThread] [INFO] (LoadImage:271) - NumpyReader: unable to load ('.',).
+
+[2023-10-12 00:09:09,321] [265956] [MainThread] [INFO] (LoadImage:271) - NrrdReader: unable to load ('.',).
+
+[2023-10-12 00:09:09,322] [265956] [MainThread] [INFO] (LoadImage:271) - ITKReader: unable to load ('.',).
+
+[2023-10-12 00:09:09,325] [265956] [MainThread] [INFO] (LoadImage:271) - PydicomReader: unable to load ('.',).
+
+[2023-10-12 00:20:08,638] [298249] [MainThread] [INFO] (monailabel.interfaces.utils.app:37) - Initializing App from: /home/bbearce/Documents/monaiLabelExploration/apps/radiology; studies: /home/bbearce/Documents/monaiLabelExploration/datasets/Task01_BrainTumor/imagesTr; conf: {'models': 'deepedit'}
+[2023-10-12 00:20:11,353] [298249] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for MONAILabelApp Found: <class 'main.MyApp'>
+[2023-10-12 00:20:11,399] [298249] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_spleen.SegmentationSpleen'>
+[2023-10-12 00:20:11,400] [298249] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_vertebra.LocalizationVertebra'>
+[2023-10-12 00:20:11,401] [298249] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_2d.Deepgrow2D'>
+[2023-10-12 00:20:11,401] [298249] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_spine.LocalizationSpine'>
+[2023-10-12 00:20:11,402] [298249] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepedit.DeepEdit'>
+[2023-10-12 00:20:11,402] [298249] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_3d.Deepgrow3D'>
+[2023-10-12 00:20:11,403] [298249] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation.Segmentation'>
+[2023-10-12 00:20:11,403] [298249] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_vertebra.SegmentationVertebra'>
+[2023-10-12 00:20:11,404] [298249] [MainThread] [INFO] (main:93) - +++ Adding Model: deepedit => lib.configs.deepedit.DeepEdit
+[2023-10-12 00:20:12,277] [298249] [MainThread] [INFO] (lib.configs.deepedit:141) - EPISTEMIC Enabled: False; Samples: 5
+[2023-10-12 00:20:12,277] [298249] [MainThread] [INFO] (main:96) - +++ Using Models: ['deepedit']
+[2023-10-12 00:20:12,277] [298249] [MainThread] [INFO] (monailabel.interfaces.app:135) - Init Datastore for: /home/bbearce/Documents/monaiLabelExploration/datasets/Task01_BrainTumor/imagesTr
+[2023-10-12 00:20:12,278] [298249] [MainThread] [INFO] (monailabel.datastore.local:130) - Auto Reload: True; Extensions: ['*.nii.gz', '*.nii', '*.nrrd', '*.jpg', '*.png', '*.tif', '*.svs', '*.xml']
+[2023-10-12 00:20:12,279] [298249] [MainThread] [INFO] (monailabel.datastore.local:577) - Invalidate count: 0
+[2023-10-12 00:20:12,279] [298249] [MainThread] [INFO] (monailabel.datastore.local:151) - Start observing external modifications on datastore (AUTO RELOAD)
+[2023-10-12 00:20:12,726] [298249] [MainThread] [INFO] (main:126) - +++ Adding Inferer:: deepedit => <lib.infers.deepedit.DeepEdit object at 0x7f3b14bf5f30>
+[2023-10-12 00:20:12,726] [298249] [MainThread] [INFO] (main:126) - +++ Adding Inferer:: deepedit_seg => <lib.infers.deepedit.DeepEdit object at 0x7f3b092c52a0>
+[2023-10-12 00:20:12,727] [298249] [MainThread] [INFO] (main:191) - {'deepedit': <lib.infers.deepedit.DeepEdit object at 0x7f3b14bf5f30>, 'deepedit_seg': <lib.infers.deepedit.DeepEdit object at 0x7f3b092c52a0>, 'Histogram+GraphCut': <monailabel.scribbles.infer.HistogramBasedGraphCut object at 0x7f3b092c5300>, 'GMM+GraphCut': <monailabel.scribbles.infer.GMMBasedGraphCut object at 0x7f3b092c5330>}
+[2023-10-12 00:20:12,727] [298249] [MainThread] [INFO] (main:206) - +++ Adding Trainer:: deepedit => <lib.trainers.deepedit.DeepEdit object at 0x7f3b092c53c0>
+[2023-10-12 00:20:12,727] [298249] [MainThread] [INFO] (monailabel.utils.sessions:51) - Session Path: /home/bbearce/.cache/monailabel/sessions
+[2023-10-12 00:20:12,727] [298249] [MainThread] [INFO] (monailabel.utils.sessions:52) - Session Expiry (max): 3600
+[2023-10-12 00:20:12,727] [298249] [MainThread] [INFO] (monailabel.interfaces.app:469) - App Init - completed
+[2023-10-12 00:20:12,728] [298249] [MainThread] [INFO] (timeloop:60) - Starting Timeloop..
+[2023-10-12 00:20:12,728] [298249] [MainThread] [INFO] (timeloop:42) - Registered job <function MONAILabelApp.on_init_complete.<locals>.run_scheduler at 0x7f3b092dc1f0>
+[2023-10-12 00:20:12,728] [298249] [MainThread] [INFO] (timeloop:63) - Timeloop now started. Jobs will run based on the interval set
+[2023-10-12 00:21:38,832] [298539] [MainThread] [INFO] (monailabel.interfaces.utils.app:37) - Initializing App from: /home/bbearce/Documents/monaiLabelExploration/apps/radiology; studies: /home/bbearce/Documents/monaiLabelExploration/datasets/Task09_Spleen/imagesTr; conf: {'models': 'deepedit'}
+[2023-10-12 00:21:41,440] [298539] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for MONAILabelApp Found: <class 'main.MyApp'>
+[2023-10-12 00:21:41,448] [298539] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_spleen.SegmentationSpleen'>
+[2023-10-12 00:21:41,449] [298539] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_vertebra.LocalizationVertebra'>
+[2023-10-12 00:21:41,449] [298539] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_2d.Deepgrow2D'>
+[2023-10-12 00:21:41,450] [298539] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_spine.LocalizationSpine'>
+[2023-10-12 00:21:41,451] [298539] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepedit.DeepEdit'>
+[2023-10-12 00:21:41,451] [298539] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_3d.Deepgrow3D'>
+[2023-10-12 00:21:41,453] [298539] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation.Segmentation'>
+[2023-10-12 00:21:41,454] [298539] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_vertebra.SegmentationVertebra'>
+[2023-10-12 00:21:41,454] [298539] [MainThread] [INFO] (main:93) - +++ Adding Model: deepedit => lib.configs.deepedit.DeepEdit
+[2023-10-12 00:21:42,409] [298539] [MainThread] [INFO] (lib.configs.deepedit:141) - EPISTEMIC Enabled: False; Samples: 5
+[2023-10-12 00:21:42,409] [298539] [MainThread] [INFO] (main:96) - +++ Using Models: ['deepedit']
+[2023-10-12 00:21:42,409] [298539] [MainThread] [INFO] (monailabel.interfaces.app:135) - Init Datastore for: /home/bbearce/Documents/monaiLabelExploration/datasets/Task09_Spleen/imagesTr
+[2023-10-12 00:21:42,410] [298539] [MainThread] [INFO] (monailabel.datastore.local:130) - Auto Reload: True; Extensions: ['*.nii.gz', '*.nii', '*.nrrd', '*.jpg', '*.png', '*.tif', '*.svs', '*.xml']
+[2023-10-12 00:21:42,421] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_62 => spleen_62.nii.gz
+[2023-10-12 00:21:42,422] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_25 => spleen_25.nii.gz
+[2023-10-12 00:21:42,422] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_24 => spleen_24.nii.gz
+[2023-10-12 00:21:42,422] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_28 => spleen_28.nii.gz
+[2023-10-12 00:21:42,422] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_27 => spleen_27.nii.gz
+[2023-10-12 00:21:42,422] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_49 => spleen_49.nii.gz
+[2023-10-12 00:21:42,423] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_20 => spleen_20.nii.gz
+[2023-10-12 00:21:42,423] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_8 => spleen_8.nii.gz
+[2023-10-12 00:21:42,423] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_40 => spleen_40.nii.gz
+[2023-10-12 00:21:42,423] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_53 => spleen_53.nii.gz
+[2023-10-12 00:21:42,423] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_61 => spleen_61.nii.gz
+[2023-10-12 00:21:42,424] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_22 => spleen_22.nii.gz
+[2023-10-12 00:21:42,424] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_56 => spleen_56.nii.gz
+[2023-10-12 00:21:42,424] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_33 => spleen_33.nii.gz
+[2023-10-12 00:21:42,424] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_60 => spleen_60.nii.gz
+[2023-10-12 00:21:42,424] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_12 => spleen_12.nii.gz
+[2023-10-12 00:21:42,424] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_41 => spleen_41.nii.gz
+[2023-10-12 00:21:42,425] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_21 => spleen_21.nii.gz
+[2023-10-12 00:21:42,425] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_2 => spleen_2.nii.gz
+[2023-10-12 00:21:42,425] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_19 => spleen_19.nii.gz
+[2023-10-12 00:21:42,425] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_63 => spleen_63.nii.gz
+[2023-10-12 00:21:42,425] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_16 => spleen_16.nii.gz
+[2023-10-12 00:21:42,426] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_32 => spleen_32.nii.gz
+[2023-10-12 00:21:42,426] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_6 => spleen_6.nii.gz
+[2023-10-12 00:21:42,426] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_44 => spleen_44.nii.gz
+[2023-10-12 00:21:42,426] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_9 => spleen_9.nii.gz
+[2023-10-12 00:21:42,426] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_17 => spleen_17.nii.gz
+[2023-10-12 00:21:42,426] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_47 => spleen_47.nii.gz
+[2023-10-12 00:21:42,427] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_38 => spleen_38.nii.gz
+[2023-10-12 00:21:42,427] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_26 => spleen_26.nii.gz
+[2023-10-12 00:21:42,427] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_18 => spleen_18.nii.gz
+[2023-10-12 00:21:42,427] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_52 => spleen_52.nii.gz
+[2023-10-12 00:21:42,427] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_31 => spleen_31.nii.gz
+[2023-10-12 00:21:42,428] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_13 => spleen_13.nii.gz
+[2023-10-12 00:21:42,428] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_3 => spleen_3.nii.gz
+[2023-10-12 00:21:42,428] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_59 => spleen_59.nii.gz
+[2023-10-12 00:21:42,428] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_14 => spleen_14.nii.gz
+[2023-10-12 00:21:42,428] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_45 => spleen_45.nii.gz
+[2023-10-12 00:21:42,428] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_46 => spleen_46.nii.gz
+[2023-10-12 00:21:42,428] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_29 => spleen_29.nii.gz
+[2023-10-12 00:21:42,429] [298539] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: spleen_10 => spleen_10.nii.gz
+[2023-10-12 00:21:42,431] [298539] [MainThread] [INFO] (monailabel.datastore.local:577) - Invalidate count: 41
+[2023-10-12 00:21:42,433] [298539] [MainThread] [INFO] (monailabel.datastore.local:151) - Start observing external modifications on datastore (AUTO RELOAD)
+[2023-10-12 00:21:42,869] [298539] [MainThread] [INFO] (main:126) - +++ Adding Inferer:: deepedit => <lib.infers.deepedit.DeepEdit object at 0x7fb9b7f45f60>
+[2023-10-12 00:21:42,869] [298539] [MainThread] [INFO] (main:126) - +++ Adding Inferer:: deepedit_seg => <lib.infers.deepedit.DeepEdit object at 0x7fb9b1bd2650>
+[2023-10-12 00:21:42,869] [298539] [MainThread] [INFO] (main:191) - {'deepedit': <lib.infers.deepedit.DeepEdit object at 0x7fb9b7f45f60>, 'deepedit_seg': <lib.infers.deepedit.DeepEdit object at 0x7fb9b1bd2650>, 'Histogram+GraphCut': <monailabel.scribbles.infer.HistogramBasedGraphCut object at 0x7fb9b1bd26b0>, 'GMM+GraphCut': <monailabel.scribbles.infer.GMMBasedGraphCut object at 0x7fb9b1bd26e0>}
+[2023-10-12 00:21:42,870] [298539] [MainThread] [INFO] (main:206) - +++ Adding Trainer:: deepedit => <lib.trainers.deepedit.DeepEdit object at 0x7fb9b1bd2770>
+[2023-10-12 00:21:42,870] [298539] [MainThread] [INFO] (monailabel.utils.sessions:51) - Session Path: /home/bbearce/.cache/monailabel/sessions
+[2023-10-12 00:21:42,870] [298539] [MainThread] [INFO] (monailabel.utils.sessions:52) - Session Expiry (max): 3600
+[2023-10-12 00:21:42,870] [298539] [MainThread] [INFO] (monailabel.interfaces.app:469) - App Init - completed
+[2023-10-12 00:21:42,871] [298539] [MainThread] [INFO] (timeloop:60) - Starting Timeloop..
+[2023-10-12 00:21:42,871] [298539] [MainThread] [INFO] (timeloop:42) - Registered job <function MONAILabelApp.on_init_complete.<locals>.run_scheduler at 0x7fb9b1c08310>
+[2023-10-12 00:21:42,871] [298539] [MainThread] [INFO] (timeloop:63) - Timeloop now started. Jobs will run based on the interval set
+[2023-10-12 00:22:47,057] [298946] [MainThread] [INFO] (monailabel.interfaces.utils.app:37) - Initializing App from: /home/bbearce/Documents/monaiLabelExploration/apps/radiology; studies: /home/bbearce/Documents/monaiLabelExploration/datasets/Task01_BrainTumor/imagesTr; conf: {'models': 'deepedit'}
+[2023-10-12 00:22:49,633] [298946] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for MONAILabelApp Found: <class 'main.MyApp'>
+[2023-10-12 00:22:49,645] [298946] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_spleen.SegmentationSpleen'>
+[2023-10-12 00:22:49,646] [298946] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_vertebra.LocalizationVertebra'>
+[2023-10-12 00:22:49,647] [298946] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_2d.Deepgrow2D'>
+[2023-10-12 00:22:49,647] [298946] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_spine.LocalizationSpine'>
+[2023-10-12 00:22:49,648] [298946] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepedit.DeepEdit'>
+[2023-10-12 00:22:49,649] [298946] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_3d.Deepgrow3D'>
+[2023-10-12 00:22:49,651] [298946] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation.Segmentation'>
+[2023-10-12 00:22:49,652] [298946] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_vertebra.SegmentationVertebra'>
+[2023-10-12 00:22:49,653] [298946] [MainThread] [INFO] (main:93) - +++ Adding Model: deepedit => lib.configs.deepedit.DeepEdit
+[2023-10-12 00:22:50,589] [298946] [MainThread] [INFO] (lib.configs.deepedit:141) - EPISTEMIC Enabled: False; Samples: 5
+[2023-10-12 00:22:50,589] [298946] [MainThread] [INFO] (main:96) - +++ Using Models: ['deepedit']
+[2023-10-12 00:22:50,589] [298946] [MainThread] [INFO] (monailabel.interfaces.app:135) - Init Datastore for: /home/bbearce/Documents/monaiLabelExploration/datasets/Task01_BrainTumor/imagesTr
+[2023-10-12 00:22:50,589] [298946] [MainThread] [INFO] (monailabel.datastore.local:130) - Auto Reload: True; Extensions: ['*.nii.gz', '*.nii', '*.nrrd', '*.jpg', '*.png', '*.tif', '*.svs', '*.xml']
+[2023-10-12 00:22:50,591] [298946] [MainThread] [INFO] (monailabel.datastore.local:577) - Invalidate count: 0
+[2023-10-12 00:22:50,591] [298946] [MainThread] [INFO] (monailabel.datastore.local:151) - Start observing external modifications on datastore (AUTO RELOAD)
+[2023-10-12 00:22:51,077] [298946] [MainThread] [INFO] (main:126) - +++ Adding Inferer:: deepedit => <lib.infers.deepedit.DeepEdit object at 0x7fc620f2c6a0>
+[2023-10-12 00:22:51,077] [298946] [MainThread] [INFO] (main:126) - +++ Adding Inferer:: deepedit_seg => <lib.infers.deepedit.DeepEdit object at 0x7fc620ff55a0>
+[2023-10-12 00:22:51,077] [298946] [MainThread] [INFO] (main:191) - {'deepedit': <lib.infers.deepedit.DeepEdit object at 0x7fc620f2c6a0>, 'deepedit_seg': <lib.infers.deepedit.DeepEdit object at 0x7fc620ff55a0>, 'Histogram+GraphCut': <monailabel.scribbles.infer.HistogramBasedGraphCut object at 0x7fc620ff7a30>, 'GMM+GraphCut': <monailabel.scribbles.infer.GMMBasedGraphCut object at 0x7fc620ff7a60>}
+[2023-10-12 00:22:51,078] [298946] [MainThread] [INFO] (main:206) - +++ Adding Trainer:: deepedit => <lib.trainers.deepedit.DeepEdit object at 0x7fc620ff7af0>
+[2023-10-12 00:22:51,078] [298946] [MainThread] [INFO] (monailabel.utils.sessions:51) - Session Path: /home/bbearce/.cache/monailabel/sessions
+[2023-10-12 00:22:51,078] [298946] [MainThread] [INFO] (monailabel.utils.sessions:52) - Session Expiry (max): 3600
+[2023-10-12 00:22:51,079] [298946] [MainThread] [INFO] (monailabel.interfaces.app:469) - App Init - completed
+[2023-10-12 00:22:51,079] [298946] [MainThread] [INFO] (timeloop:60) - Starting Timeloop..
+[2023-10-12 00:22:51,080] [298946] [MainThread] [INFO] (timeloop:42) - Registered job <function MONAILabelApp.on_init_complete.<locals>.run_scheduler at 0x7fc619cc01f0>
+[2023-10-12 00:22:51,080] [298946] [MainThread] [INFO] (timeloop:63) - Timeloop now started. Jobs will run based on the interval set
+[2023-10-12 00:24:37,936] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.app:37) - Initializing App from: /home/bbearce/Documents/monaiLabelExploration/apps/radiology; studies: /home/bbearce/Documents/monaiLabelExploration/datasets/Task01_BrainTumour/imagesTr; conf: {'models': 'deepedit'}
+[2023-10-12 00:24:40,795] [299321] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for MONAILabelApp Found: <class 'main.MyApp'>
+[2023-10-12 00:24:40,814] [299321] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_spleen.SegmentationSpleen'>
+[2023-10-12 00:24:40,814] [299321] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_vertebra.LocalizationVertebra'>
+[2023-10-12 00:24:40,815] [299321] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_2d.Deepgrow2D'>
+[2023-10-12 00:24:40,816] [299321] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_spine.LocalizationSpine'>
+[2023-10-12 00:24:40,817] [299321] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepedit.DeepEdit'>
+[2023-10-12 00:24:40,818] [299321] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_3d.Deepgrow3D'>
+[2023-10-12 00:24:40,819] [299321] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation.Segmentation'>
+[2023-10-12 00:24:40,820] [299321] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_vertebra.SegmentationVertebra'>
+[2023-10-12 00:24:40,820] [299321] [MainThread] [INFO] (main:93) - +++ Adding Model: deepedit => lib.configs.deepedit.DeepEdit
+[2023-10-12 00:24:41,625] [299321] [MainThread] [INFO] (lib.configs.deepedit:141) - EPISTEMIC Enabled: False; Samples: 5
+[2023-10-12 00:24:41,625] [299321] [MainThread] [INFO] (main:96) - +++ Using Models: ['deepedit']
+[2023-10-12 00:24:41,625] [299321] [MainThread] [INFO] (monailabel.interfaces.app:135) - Init Datastore for: /home/bbearce/Documents/monaiLabelExploration/datasets/Task01_BrainTumour/imagesTr
+[2023-10-12 00:24:41,626] [299321] [MainThread] [INFO] (monailabel.datastore.local:130) - Auto Reload: True; Extensions: ['*.nii.gz', '*.nii', '*.nrrd', '*.jpg', '*.png', '*.tif', '*.svs', '*.xml']
+[2023-10-12 00:24:41,628] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_304 => BRATS_304.nii.gz
+[2023-10-12 00:24:41,629] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_008 => BRATS_008.nii.gz
+[2023-10-12 00:24:41,629] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_239 => BRATS_239.nii.gz
+[2023-10-12 00:24:41,629] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_023 => BRATS_023.nii.gz
+[2023-10-12 00:24:41,629] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_162 => BRATS_162.nii.gz
+[2023-10-12 00:24:41,629] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_479 => BRATS_479.nii.gz
+[2023-10-12 00:24:41,630] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_189 => BRATS_189.nii.gz
+[2023-10-12 00:24:41,630] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_152 => BRATS_152.nii.gz
+[2023-10-12 00:24:41,630] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_258 => BRATS_258.nii.gz
+[2023-10-12 00:24:41,630] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_253 => BRATS_253.nii.gz
+[2023-10-12 00:24:41,630] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_149 => BRATS_149.nii.gz
+[2023-10-12 00:24:41,630] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_205 => BRATS_205.nii.gz
+[2023-10-12 00:24:41,630] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_104 => BRATS_104.nii.gz
+[2023-10-12 00:24:41,631] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_448 => BRATS_448.nii.gz
+[2023-10-12 00:24:41,631] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_226 => BRATS_226.nii.gz
+[2023-10-12 00:24:41,631] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_274 => BRATS_274.nii.gz
+[2023-10-12 00:24:41,631] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_417 => BRATS_417.nii.gz
+[2023-10-12 00:24:41,631] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_440 => BRATS_440.nii.gz
+[2023-10-12 00:24:41,631] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_114 => BRATS_114.nii.gz
+[2023-10-12 00:24:41,632] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_477 => BRATS_477.nii.gz
+[2023-10-12 00:24:41,632] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_153 => BRATS_153.nii.gz
+[2023-10-12 00:24:41,632] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_174 => BRATS_174.nii.gz
+[2023-10-12 00:24:41,632] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_157 => BRATS_157.nii.gz
+[2023-10-12 00:24:41,632] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_290 => BRATS_290.nii.gz
+[2023-10-12 00:24:41,632] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_353 => BRATS_353.nii.gz
+[2023-10-12 00:24:41,633] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_190 => BRATS_190.nii.gz
+[2023-10-12 00:24:41,633] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_018 => BRATS_018.nii.gz
+[2023-10-12 00:24:41,633] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_310 => BRATS_310.nii.gz
+[2023-10-12 00:24:41,633] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_100 => BRATS_100.nii.gz
+[2023-10-12 00:24:41,633] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_130 => BRATS_130.nii.gz
+[2023-10-12 00:24:41,633] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_181 => BRATS_181.nii.gz
+[2023-10-12 00:24:41,634] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_334 => BRATS_334.nii.gz
+[2023-10-12 00:24:41,634] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_248 => BRATS_248.nii.gz
+[2023-10-12 00:24:41,634] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_169 => BRATS_169.nii.gz
+[2023-10-12 00:24:41,634] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_346 => BRATS_346.nii.gz
+[2023-10-12 00:24:41,634] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_386 => BRATS_386.nii.gz
+[2023-10-12 00:24:41,634] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_296 => BRATS_296.nii.gz
+[2023-10-12 00:24:41,634] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_449 => BRATS_449.nii.gz
+[2023-10-12 00:24:41,635] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_217 => BRATS_217.nii.gz
+[2023-10-12 00:24:41,635] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_237 => BRATS_237.nii.gz
+[2023-10-12 00:24:41,635] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_284 => BRATS_284.nii.gz
+[2023-10-12 00:24:41,635] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_116 => BRATS_116.nii.gz
+[2023-10-12 00:24:41,635] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_193 => BRATS_193.nii.gz
+[2023-10-12 00:24:41,635] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_068 => BRATS_068.nii.gz
+[2023-10-12 00:24:41,636] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_481 => BRATS_481.nii.gz
+[2023-10-12 00:24:41,636] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_052 => BRATS_052.nii.gz
+[2023-10-12 00:24:41,636] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_171 => BRATS_171.nii.gz
+[2023-10-12 00:24:41,636] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_034 => BRATS_034.nii.gz
+[2023-10-12 00:24:41,637] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_452 => BRATS_452.nii.gz
+[2023-10-12 00:24:41,637] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_474 => BRATS_474.nii.gz
+[2023-10-12 00:24:41,637] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_367 => BRATS_367.nii.gz
+[2023-10-12 00:24:41,637] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_007 => BRATS_007.nii.gz
+[2023-10-12 00:24:41,638] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_331 => BRATS_331.nii.gz
+[2023-10-12 00:24:41,638] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_265 => BRATS_265.nii.gz
+[2023-10-12 00:24:41,638] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_118 => BRATS_118.nii.gz
+[2023-10-12 00:24:41,638] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_178 => BRATS_178.nii.gz
+[2023-10-12 00:24:41,639] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_294 => BRATS_294.nii.gz
+[2023-10-12 00:24:41,639] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_328 => BRATS_328.nii.gz
+[2023-10-12 00:24:41,639] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_006 => BRATS_006.nii.gz
+[2023-10-12 00:24:41,640] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_212 => BRATS_212.nii.gz
+[2023-10-12 00:24:41,640] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_402 => BRATS_402.nii.gz
+[2023-10-12 00:24:41,640] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_031 => BRATS_031.nii.gz
+[2023-10-12 00:24:41,640] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_124 => BRATS_124.nii.gz
+[2023-10-12 00:24:41,641] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_360 => BRATS_360.nii.gz
+[2023-10-12 00:24:41,641] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_473 => BRATS_473.nii.gz
+[2023-10-12 00:24:41,641] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_028 => BRATS_028.nii.gz
+[2023-10-12 00:24:41,641] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_483 => BRATS_483.nii.gz
+[2023-10-12 00:24:41,641] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_092 => BRATS_092.nii.gz
+[2023-10-12 00:24:41,641] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_478 => BRATS_478.nii.gz
+[2023-10-12 00:24:41,642] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_164 => BRATS_164.nii.gz
+[2023-10-12 00:24:41,642] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_317 => BRATS_317.nii.gz
+[2023-10-12 00:24:41,642] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_090 => BRATS_090.nii.gz
+[2023-10-12 00:24:41,642] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_061 => BRATS_061.nii.gz
+[2023-10-12 00:24:41,642] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_139 => BRATS_139.nii.gz
+[2023-10-12 00:24:41,643] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_145 => BRATS_145.nii.gz
+[2023-10-12 00:24:41,643] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_344 => BRATS_344.nii.gz
+[2023-10-12 00:24:41,643] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_143 => BRATS_143.nii.gz
+[2023-10-12 00:24:41,643] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_454 => BRATS_454.nii.gz
+[2023-10-12 00:24:41,643] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_335 => BRATS_335.nii.gz
+[2023-10-12 00:24:41,644] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_166 => BRATS_166.nii.gz
+[2023-10-12 00:24:41,644] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_146 => BRATS_146.nii.gz
+[2023-10-12 00:24:41,644] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_475 => BRATS_475.nii.gz
+[2023-10-12 00:24:41,644] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_163 => BRATS_163.nii.gz
+[2023-10-12 00:24:41,644] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_223 => BRATS_223.nii.gz
+[2023-10-12 00:24:41,644] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_045 => BRATS_045.nii.gz
+[2023-10-12 00:24:41,644] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_352 => BRATS_352.nii.gz
+[2023-10-12 00:24:41,645] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_291 => BRATS_291.nii.gz
+[2023-10-12 00:24:41,645] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_203 => BRATS_203.nii.gz
+[2023-10-12 00:24:41,645] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_434 => BRATS_434.nii.gz
+[2023-10-12 00:24:41,645] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_415 => BRATS_415.nii.gz
+[2023-10-12 00:24:41,645] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_337 => BRATS_337.nii.gz
+[2023-10-12 00:24:41,645] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_158 => BRATS_158.nii.gz
+[2023-10-12 00:24:41,646] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_270 => BRATS_270.nii.gz
+[2023-10-12 00:24:41,646] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_465 => BRATS_465.nii.gz
+[2023-10-12 00:24:41,646] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_287 => BRATS_287.nii.gz
+[2023-10-12 00:24:41,646] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_266 => BRATS_266.nii.gz
+[2023-10-12 00:24:41,646] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_220 => BRATS_220.nii.gz
+[2023-10-12 00:24:41,646] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_279 => BRATS_279.nii.gz
+[2023-10-12 00:24:41,647] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_446 => BRATS_446.nii.gz
+[2023-10-12 00:24:41,647] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_225 => BRATS_225.nii.gz
+[2023-10-12 00:24:41,647] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_001 => BRATS_001.nii.gz
+[2023-10-12 00:24:41,647] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_264 => BRATS_264.nii.gz
+[2023-10-12 00:24:41,647] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_315 => BRATS_315.nii.gz
+[2023-10-12 00:24:41,647] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_196 => BRATS_196.nii.gz
+[2023-10-12 00:24:41,647] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_340 => BRATS_340.nii.gz
+[2023-10-12 00:24:41,648] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_345 => BRATS_345.nii.gz
+[2023-10-12 00:24:41,648] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_199 => BRATS_199.nii.gz
+[2023-10-12 00:24:41,648] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_011 => BRATS_011.nii.gz
+[2023-10-12 00:24:41,648] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_066 => BRATS_066.nii.gz
+[2023-10-12 00:24:41,648] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_356 => BRATS_356.nii.gz
+[2023-10-12 00:24:41,648] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_376 => BRATS_376.nii.gz
+[2023-10-12 00:24:41,648] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_038 => BRATS_038.nii.gz
+[2023-10-12 00:24:41,649] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_117 => BRATS_117.nii.gz
+[2023-10-12 00:24:41,649] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_131 => BRATS_131.nii.gz
+[2023-10-12 00:24:41,649] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_096 => BRATS_096.nii.gz
+[2023-10-12 00:24:41,649] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_456 => BRATS_456.nii.gz
+[2023-10-12 00:24:41,649] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_480 => BRATS_480.nii.gz
+[2023-10-12 00:24:41,650] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_032 => BRATS_032.nii.gz
+[2023-10-12 00:24:41,650] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_150 => BRATS_150.nii.gz
+[2023-10-12 00:24:41,650] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_313 => BRATS_313.nii.gz
+[2023-10-12 00:24:41,650] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_256 => BRATS_256.nii.gz
+[2023-10-12 00:24:41,650] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_064 => BRATS_064.nii.gz
+[2023-10-12 00:24:41,650] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_073 => BRATS_073.nii.gz
+[2023-10-12 00:24:41,650] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_176 => BRATS_176.nii.gz
+[2023-10-12 00:24:41,651] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_029 => BRATS_029.nii.gz
+[2023-10-12 00:24:41,651] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_422 => BRATS_422.nii.gz
+[2023-10-12 00:24:41,651] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_391 => BRATS_391.nii.gz
+[2023-10-12 00:24:41,651] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_323 => BRATS_323.nii.gz
+[2023-10-12 00:24:41,651] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_179 => BRATS_179.nii.gz
+[2023-10-12 00:24:41,652] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_115 => BRATS_115.nii.gz
+[2023-10-12 00:24:41,652] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_059 => BRATS_059.nii.gz
+[2023-10-12 00:24:41,652] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_263 => BRATS_263.nii.gz
+[2023-10-12 00:24:41,652] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_308 => BRATS_308.nii.gz
+[2023-10-12 00:24:41,653] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_083 => BRATS_083.nii.gz
+[2023-10-12 00:24:41,653] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_302 => BRATS_302.nii.gz
+[2023-10-12 00:24:41,653] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_321 => BRATS_321.nii.gz
+[2023-10-12 00:24:41,653] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_125 => BRATS_125.nii.gz
+[2023-10-12 00:24:41,653] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_437 => BRATS_437.nii.gz
+[2023-10-12 00:24:41,653] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_211 => BRATS_211.nii.gz
+[2023-10-12 00:24:41,654] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_076 => BRATS_076.nii.gz
+[2023-10-12 00:24:41,654] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_099 => BRATS_099.nii.gz
+[2023-10-12 00:24:41,654] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_350 => BRATS_350.nii.gz
+[2023-10-12 00:24:41,654] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_026 => BRATS_026.nii.gz
+[2023-10-12 00:24:41,654] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_438 => BRATS_438.nii.gz
+[2023-10-12 00:24:41,654] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_461 => BRATS_461.nii.gz
+[2023-10-12 00:24:41,655] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_136 => BRATS_136.nii.gz
+[2023-10-12 00:24:41,655] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_201 => BRATS_201.nii.gz
+[2023-10-12 00:24:41,655] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_103 => BRATS_103.nii.gz
+[2023-10-12 00:24:41,655] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_459 => BRATS_459.nii.gz
+[2023-10-12 00:24:41,655] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_173 => BRATS_173.nii.gz
+[2023-10-12 00:24:41,656] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_213 => BRATS_213.nii.gz
+[2023-10-12 00:24:41,656] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_268 => BRATS_268.nii.gz
+[2023-10-12 00:24:41,656] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_342 => BRATS_342.nii.gz
+[2023-10-12 00:24:41,656] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_262 => BRATS_262.nii.gz
+[2023-10-12 00:24:41,657] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_039 => BRATS_039.nii.gz
+[2023-10-12 00:24:41,657] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_147 => BRATS_147.nii.gz
+[2023-10-12 00:24:41,657] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_471 => BRATS_471.nii.gz
+[2023-10-12 00:24:41,657] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_088 => BRATS_088.nii.gz
+[2023-10-12 00:24:41,657] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_098 => BRATS_098.nii.gz
+[2023-10-12 00:24:41,658] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_044 => BRATS_044.nii.gz
+[2023-10-12 00:24:41,658] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_014 => BRATS_014.nii.gz
+[2023-10-12 00:24:41,658] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_015 => BRATS_015.nii.gz
+[2023-10-12 00:24:41,658] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_443 => BRATS_443.nii.gz
+[2023-10-12 00:24:41,659] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_338 => BRATS_338.nii.gz
+[2023-10-12 00:24:41,659] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_426 => BRATS_426.nii.gz
+[2023-10-12 00:24:41,659] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_260 => BRATS_260.nii.gz
+[2023-10-12 00:24:41,659] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_108 => BRATS_108.nii.gz
+[2023-10-12 00:24:41,659] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_208 => BRATS_208.nii.gz
+[2023-10-12 00:24:41,659] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_214 => BRATS_214.nii.gz
+[2023-10-12 00:24:41,660] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_324 => BRATS_324.nii.gz
+[2023-10-12 00:24:41,660] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_395 => BRATS_395.nii.gz
+[2023-10-12 00:24:41,660] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_482 => BRATS_482.nii.gz
+[2023-10-12 00:24:41,660] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_025 => BRATS_025.nii.gz
+[2023-10-12 00:24:41,661] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_388 => BRATS_388.nii.gz
+[2023-10-12 00:24:41,661] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_385 => BRATS_385.nii.gz
+[2023-10-12 00:24:41,661] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_140 => BRATS_140.nii.gz
+[2023-10-12 00:24:41,661] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_186 => BRATS_186.nii.gz
+[2023-10-12 00:24:41,661] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_250 => BRATS_250.nii.gz
+[2023-10-12 00:24:41,662] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_230 => BRATS_230.nii.gz
+[2023-10-12 00:24:41,662] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_275 => BRATS_275.nii.gz
+[2023-10-12 00:24:41,662] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_170 => BRATS_170.nii.gz
+[2023-10-12 00:24:41,662] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_295 => BRATS_295.nii.gz
+[2023-10-12 00:24:41,662] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_224 => BRATS_224.nii.gz
+[2023-10-12 00:24:41,663] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_127 => BRATS_127.nii.gz
+[2023-10-12 00:24:41,663] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_055 => BRATS_055.nii.gz
+[2023-10-12 00:24:41,663] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_423 => BRATS_423.nii.gz
+[2023-10-12 00:24:41,663] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_414 => BRATS_414.nii.gz
+[2023-10-12 00:24:41,663] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_341 => BRATS_341.nii.gz
+[2023-10-12 00:24:41,663] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_429 => BRATS_429.nii.gz
+[2023-10-12 00:24:41,664] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_167 => BRATS_167.nii.gz
+[2023-10-12 00:24:41,664] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_111 => BRATS_111.nii.gz
+[2023-10-12 00:24:41,664] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_016 => BRATS_016.nii.gz
+[2023-10-12 00:24:41,664] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_445 => BRATS_445.nii.gz
+[2023-10-12 00:24:41,664] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_236 => BRATS_236.nii.gz
+[2023-10-12 00:24:41,664] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_373 => BRATS_373.nii.gz
+[2023-10-12 00:24:41,665] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_137 => BRATS_137.nii.gz
+[2023-10-12 00:24:41,665] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_439 => BRATS_439.nii.gz
+[2023-10-12 00:24:41,665] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_101 => BRATS_101.nii.gz
+[2023-10-12 00:24:41,665] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_383 => BRATS_383.nii.gz
+[2023-10-12 00:24:41,665] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_374 => BRATS_374.nii.gz
+[2023-10-12 00:24:41,665] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_428 => BRATS_428.nii.gz
+[2023-10-12 00:24:41,665] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_463 => BRATS_463.nii.gz
+[2023-10-12 00:24:41,666] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_082 => BRATS_082.nii.gz
+[2023-10-12 00:24:41,666] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_069 => BRATS_069.nii.gz
+[2023-10-12 00:24:41,666] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_244 => BRATS_244.nii.gz
+[2023-10-12 00:24:41,666] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_121 => BRATS_121.nii.gz
+[2023-10-12 00:24:41,666] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_113 => BRATS_113.nii.gz
+[2023-10-12 00:24:41,666] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_408 => BRATS_408.nii.gz
+[2023-10-12 00:24:41,667] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_077 => BRATS_077.nii.gz
+[2023-10-12 00:24:41,667] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_351 => BRATS_351.nii.gz
+[2023-10-12 00:24:41,667] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_027 => BRATS_027.nii.gz
+[2023-10-12 00:24:41,667] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_254 => BRATS_254.nii.gz
+[2023-10-12 00:24:41,667] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_292 => BRATS_292.nii.gz
+[2023-10-12 00:24:41,668] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_441 => BRATS_441.nii.gz
+[2023-10-12 00:24:41,668] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_326 => BRATS_326.nii.gz
+[2023-10-12 00:24:41,668] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_020 => BRATS_020.nii.gz
+[2023-10-12 00:24:41,668] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_094 => BRATS_094.nii.gz
+[2023-10-12 00:24:41,668] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_411 => BRATS_411.nii.gz
+[2023-10-12 00:24:41,668] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_300 => BRATS_300.nii.gz
+[2023-10-12 00:24:41,669] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_307 => BRATS_307.nii.gz
+[2023-10-12 00:24:41,669] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_156 => BRATS_156.nii.gz
+[2023-10-12 00:24:41,669] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_366 => BRATS_366.nii.gz
+[2023-10-12 00:24:41,669] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_455 => BRATS_455.nii.gz
+[2023-10-12 00:24:41,669] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_389 => BRATS_389.nii.gz
+[2023-10-12 00:24:41,669] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_278 => BRATS_278.nii.gz
+[2023-10-12 00:24:41,669] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_238 => BRATS_238.nii.gz
+[2023-10-12 00:24:41,670] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_043 => BRATS_043.nii.gz
+[2023-10-12 00:24:41,670] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_298 => BRATS_298.nii.gz
+[2023-10-12 00:24:41,670] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_005 => BRATS_005.nii.gz
+[2023-10-12 00:24:41,670] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_231 => BRATS_231.nii.gz
+[2023-10-12 00:24:41,670] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_332 => BRATS_332.nii.gz
+[2023-10-12 00:24:41,671] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_202 => BRATS_202.nii.gz
+[2023-10-12 00:24:41,671] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_314 => BRATS_314.nii.gz
+[2023-10-12 00:24:41,671] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_251 => BRATS_251.nii.gz
+[2023-10-12 00:24:41,672] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_406 => BRATS_406.nii.gz
+[2023-10-12 00:24:41,672] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_036 => BRATS_036.nii.gz
+[2023-10-12 00:24:41,672] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_288 => BRATS_288.nii.gz
+[2023-10-12 00:24:41,672] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_299 => BRATS_299.nii.gz
+[2023-10-12 00:24:41,673] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_091 => BRATS_091.nii.gz
+[2023-10-12 00:24:41,673] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_037 => BRATS_037.nii.gz
+[2023-10-12 00:24:41,673] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_053 => BRATS_053.nii.gz
+[2023-10-12 00:24:41,673] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_105 => BRATS_105.nii.gz
+[2023-10-12 00:24:41,674] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_347 => BRATS_347.nii.gz
+[2023-10-12 00:24:41,674] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_183 => BRATS_183.nii.gz
+[2023-10-12 00:24:41,674] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_293 => BRATS_293.nii.gz
+[2023-10-12 00:24:41,674] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_470 => BRATS_470.nii.gz
+[2023-10-12 00:24:41,674] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_322 => BRATS_322.nii.gz
+[2023-10-12 00:24:41,674] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_273 => BRATS_273.nii.gz
+[2023-10-12 00:24:41,675] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_141 => BRATS_141.nii.gz
+[2023-10-12 00:24:41,675] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_123 => BRATS_123.nii.gz
+[2023-10-12 00:24:41,675] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_460 => BRATS_460.nii.gz
+[2023-10-12 00:24:41,675] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_095 => BRATS_095.nii.gz
+[2023-10-12 00:24:41,675] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_413 => BRATS_413.nii.gz
+[2023-10-12 00:24:41,676] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_012 => BRATS_012.nii.gz
+[2023-10-12 00:24:41,676] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_425 => BRATS_425.nii.gz
+[2023-10-12 00:24:41,676] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_133 => BRATS_133.nii.gz
+[2023-10-12 00:24:41,676] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_134 => BRATS_134.nii.gz
+[2023-10-12 00:24:41,676] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_155 => BRATS_155.nii.gz
+[2023-10-12 00:24:41,677] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_074 => BRATS_074.nii.gz
+[2023-10-12 00:24:41,677] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_319 => BRATS_319.nii.gz
+[2023-10-12 00:24:41,677] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_301 => BRATS_301.nii.gz
+[2023-10-12 00:24:41,677] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_364 => BRATS_364.nii.gz
+[2023-10-12 00:24:41,678] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_339 => BRATS_339.nii.gz
+[2023-10-12 00:24:41,678] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_424 => BRATS_424.nii.gz
+[2023-10-12 00:24:41,678] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_197 => BRATS_197.nii.gz
+[2023-10-12 00:24:41,678] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_081 => BRATS_081.nii.gz
+[2023-10-12 00:24:41,678] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_180 => BRATS_180.nii.gz
+[2023-10-12 00:24:41,678] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_191 => BRATS_191.nii.gz
+[2023-10-12 00:24:41,678] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_320 => BRATS_320.nii.gz
+[2023-10-12 00:24:41,679] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_401 => BRATS_401.nii.gz
+[2023-10-12 00:24:41,679] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_484 => BRATS_484.nii.gz
+[2023-10-12 00:24:41,679] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_358 => BRATS_358.nii.gz
+[2023-10-12 00:24:41,679] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_330 => BRATS_330.nii.gz
+[2023-10-12 00:24:41,679] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_453 => BRATS_453.nii.gz
+[2023-10-12 00:24:41,679] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_086 => BRATS_086.nii.gz
+[2023-10-12 00:24:41,680] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_363 => BRATS_363.nii.gz
+[2023-10-12 00:24:41,680] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_233 => BRATS_233.nii.gz
+[2023-10-12 00:24:41,680] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_387 => BRATS_387.nii.gz
+[2023-10-12 00:24:41,680] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_333 => BRATS_333.nii.gz
+[2023-10-12 00:24:41,680] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_377 => BRATS_377.nii.gz
+[2023-10-12 00:24:41,680] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_343 => BRATS_343.nii.gz
+[2023-10-12 00:24:41,681] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_257 => BRATS_257.nii.gz
+[2023-10-12 00:24:41,681] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_316 => BRATS_316.nii.gz
+[2023-10-12 00:24:41,681] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_382 => BRATS_382.nii.gz
+[2023-10-12 00:24:41,681] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_365 => BRATS_365.nii.gz
+[2023-10-12 00:24:41,681] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_192 => BRATS_192.nii.gz
+[2023-10-12 00:24:41,682] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_421 => BRATS_421.nii.gz
+[2023-10-12 00:24:41,682] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_071 => BRATS_071.nii.gz
+[2023-10-12 00:24:41,682] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_198 => BRATS_198.nii.gz
+[2023-10-12 00:24:41,682] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_311 => BRATS_311.nii.gz
+[2023-10-12 00:24:41,682] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_035 => BRATS_035.nii.gz
+[2023-10-12 00:24:41,683] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_469 => BRATS_469.nii.gz
+[2023-10-12 00:24:41,683] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_235 => BRATS_235.nii.gz
+[2023-10-12 00:24:41,683] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_228 => BRATS_228.nii.gz
+[2023-10-12 00:24:41,683] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_396 => BRATS_396.nii.gz
+[2023-10-12 00:24:41,683] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_142 => BRATS_142.nii.gz
+[2023-10-12 00:24:41,683] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_215 => BRATS_215.nii.gz
+[2023-10-12 00:24:41,684] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_046 => BRATS_046.nii.gz
+[2023-10-12 00:24:41,684] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_172 => BRATS_172.nii.gz
+[2023-10-12 00:24:41,684] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_177 => BRATS_177.nii.gz
+[2023-10-12 00:24:41,684] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_394 => BRATS_394.nii.gz
+[2023-10-12 00:24:41,684] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_093 => BRATS_093.nii.gz
+[2023-10-12 00:24:41,684] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_282 => BRATS_282.nii.gz
+[2023-10-12 00:24:41,685] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_194 => BRATS_194.nii.gz
+[2023-10-12 00:24:41,685] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_049 => BRATS_049.nii.gz
+[2023-10-12 00:24:41,685] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_450 => BRATS_450.nii.gz
+[2023-10-12 00:24:41,685] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_144 => BRATS_144.nii.gz
+[2023-10-12 00:24:41,685] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_009 => BRATS_009.nii.gz
+[2023-10-12 00:24:41,685] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_458 => BRATS_458.nii.gz
+[2023-10-12 00:24:41,686] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_409 => BRATS_409.nii.gz
+[2023-10-12 00:24:41,686] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_058 => BRATS_058.nii.gz
+[2023-10-12 00:24:41,686] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_325 => BRATS_325.nii.gz
+[2023-10-12 00:24:41,686] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_464 => BRATS_464.nii.gz
+[2023-10-12 00:24:41,686] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_261 => BRATS_261.nii.gz
+[2023-10-12 00:24:41,686] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_369 => BRATS_369.nii.gz
+[2023-10-12 00:24:41,687] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_126 => BRATS_126.nii.gz
+[2023-10-12 00:24:41,687] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_184 => BRATS_184.nii.gz
+[2023-10-12 00:24:41,687] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_444 => BRATS_444.nii.gz
+[2023-10-12 00:24:41,688] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_403 => BRATS_403.nii.gz
+[2023-10-12 00:24:41,688] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_476 => BRATS_476.nii.gz
+[2023-10-12 00:24:41,688] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_451 => BRATS_451.nii.gz
+[2023-10-12 00:24:41,689] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_240 => BRATS_240.nii.gz
+[2023-10-12 00:24:41,689] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_269 => BRATS_269.nii.gz
+[2023-10-12 00:24:41,689] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_151 => BRATS_151.nii.gz
+[2023-10-12 00:24:41,689] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_267 => BRATS_267.nii.gz
+[2023-10-12 00:24:41,690] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_380 => BRATS_380.nii.gz
+[2023-10-12 00:24:41,690] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_271 => BRATS_271.nii.gz
+[2023-10-12 00:24:41,690] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_442 => BRATS_442.nii.gz
+[2023-10-12 00:24:41,690] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_210 => BRATS_210.nii.gz
+[2023-10-12 00:24:41,691] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_336 => BRATS_336.nii.gz
+[2023-10-12 00:24:41,691] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_259 => BRATS_259.nii.gz
+[2023-10-12 00:24:41,691] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_219 => BRATS_219.nii.gz
+[2023-10-12 00:24:41,691] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_436 => BRATS_436.nii.gz
+[2023-10-12 00:24:41,692] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_067 => BRATS_067.nii.gz
+[2023-10-12 00:24:41,692] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_283 => BRATS_283.nii.gz
+[2023-10-12 00:24:41,692] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_327 => BRATS_327.nii.gz
+[2023-10-12 00:24:41,693] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_466 => BRATS_466.nii.gz
+[2023-10-12 00:24:41,693] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_329 => BRATS_329.nii.gz
+[2023-10-12 00:24:41,693] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_010 => BRATS_010.nii.gz
+[2023-10-12 00:24:41,694] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_051 => BRATS_051.nii.gz
+[2023-10-12 00:24:41,694] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_272 => BRATS_272.nii.gz
+[2023-10-12 00:24:41,694] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_042 => BRATS_042.nii.gz
+[2023-10-12 00:24:41,694] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_072 => BRATS_072.nii.gz
+[2023-10-12 00:24:41,694] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_120 => BRATS_120.nii.gz
+[2023-10-12 00:24:41,695] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_305 => BRATS_305.nii.gz
+[2023-10-12 00:24:41,695] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_148 => BRATS_148.nii.gz
+[2023-10-12 00:24:41,695] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_109 => BRATS_109.nii.gz
+[2023-10-12 00:24:41,695] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_128 => BRATS_128.nii.gz
+[2023-10-12 00:24:41,696] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_138 => BRATS_138.nii.gz
+[2023-10-12 00:24:41,696] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_188 => BRATS_188.nii.gz
+[2023-10-12 00:24:41,696] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_063 => BRATS_063.nii.gz
+[2023-10-12 00:24:41,697] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_065 => BRATS_065.nii.gz
+[2023-10-12 00:24:41,697] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_079 => BRATS_079.nii.gz
+[2023-10-12 00:24:41,697] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_375 => BRATS_375.nii.gz
+[2023-10-12 00:24:41,697] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_379 => BRATS_379.nii.gz
+[2023-10-12 00:24:41,697] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_056 => BRATS_056.nii.gz
+[2023-10-12 00:24:41,698] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_378 => BRATS_378.nii.gz
+[2023-10-12 00:24:41,698] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_392 => BRATS_392.nii.gz
+[2023-10-12 00:24:41,698] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_218 => BRATS_218.nii.gz
+[2023-10-12 00:24:41,698] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_097 => BRATS_097.nii.gz
+[2023-10-12 00:24:41,698] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_252 => BRATS_252.nii.gz
+[2023-10-12 00:24:41,698] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_420 => BRATS_420.nii.gz
+[2023-10-12 00:24:41,699] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_030 => BRATS_030.nii.gz
+[2023-10-12 00:24:41,699] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_381 => BRATS_381.nii.gz
+[2023-10-12 00:24:41,699] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_234 => BRATS_234.nii.gz
+[2023-10-12 00:24:41,699] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_017 => BRATS_017.nii.gz
+[2023-10-12 00:24:41,699] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_354 => BRATS_354.nii.gz
+[2023-10-12 00:24:41,699] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_119 => BRATS_119.nii.gz
+[2023-10-12 00:24:41,700] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_404 => BRATS_404.nii.gz
+[2023-10-12 00:24:41,700] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_399 => BRATS_399.nii.gz
+[2023-10-12 00:24:41,700] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_041 => BRATS_041.nii.gz
+[2023-10-12 00:24:41,700] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_004 => BRATS_004.nii.gz
+[2023-10-12 00:24:41,700] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_467 => BRATS_467.nii.gz
+[2023-10-12 00:24:41,700] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_243 => BRATS_243.nii.gz
+[2023-10-12 00:24:41,701] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_416 => BRATS_416.nii.gz
+[2023-10-12 00:24:41,701] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_024 => BRATS_024.nii.gz
+[2023-10-12 00:24:41,701] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_312 => BRATS_312.nii.gz
+[2023-10-12 00:24:41,701] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_209 => BRATS_209.nii.gz
+[2023-10-12 00:24:41,701] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_447 => BRATS_447.nii.gz
+[2023-10-12 00:24:41,702] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_084 => BRATS_084.nii.gz
+[2023-10-12 00:24:41,702] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_359 => BRATS_359.nii.gz
+[2023-10-12 00:24:41,702] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_122 => BRATS_122.nii.gz
+[2023-10-12 00:24:41,702] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_057 => BRATS_057.nii.gz
+[2023-10-12 00:24:41,703] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_182 => BRATS_182.nii.gz
+[2023-10-12 00:24:41,703] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_204 => BRATS_204.nii.gz
+[2023-10-12 00:24:41,703] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_129 => BRATS_129.nii.gz
+[2023-10-12 00:24:41,703] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_070 => BRATS_070.nii.gz
+[2023-10-12 00:24:41,704] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_349 => BRATS_349.nii.gz
+[2023-10-12 00:24:41,704] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_195 => BRATS_195.nii.gz
+[2023-10-12 00:24:41,704] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_407 => BRATS_407.nii.gz
+[2023-10-12 00:24:41,705] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_106 => BRATS_106.nii.gz
+[2023-10-12 00:24:41,705] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_060 => BRATS_060.nii.gz
+[2023-10-12 00:24:41,705] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_161 => BRATS_161.nii.gz
+[2023-10-12 00:24:41,705] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_249 => BRATS_249.nii.gz
+[2023-10-12 00:24:41,705] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_289 => BRATS_289.nii.gz
+[2023-10-12 00:24:41,706] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_132 => BRATS_132.nii.gz
+[2023-10-12 00:24:41,706] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_019 => BRATS_019.nii.gz
+[2023-10-12 00:24:41,706] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_168 => BRATS_168.nii.gz
+[2023-10-12 00:24:41,706] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_165 => BRATS_165.nii.gz
+[2023-10-12 00:24:41,707] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_242 => BRATS_242.nii.gz
+[2023-10-12 00:24:41,707] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_080 => BRATS_080.nii.gz
+[2023-10-12 00:24:41,707] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_281 => BRATS_281.nii.gz
+[2023-10-12 00:24:41,708] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_357 => BRATS_357.nii.gz
+[2023-10-12 00:24:41,708] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_227 => BRATS_227.nii.gz
+[2023-10-12 00:24:41,708] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_427 => BRATS_427.nii.gz
+[2023-10-12 00:24:41,709] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_047 => BRATS_047.nii.gz
+[2023-10-12 00:24:41,709] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_276 => BRATS_276.nii.gz
+[2023-10-12 00:24:41,709] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_462 => BRATS_462.nii.gz
+[2023-10-12 00:24:41,709] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_222 => BRATS_222.nii.gz
+[2023-10-12 00:24:41,709] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_159 => BRATS_159.nii.gz
+[2023-10-12 00:24:41,709] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_040 => BRATS_040.nii.gz
+[2023-10-12 00:24:41,710] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_303 => BRATS_303.nii.gz
+[2023-10-12 00:24:41,710] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_075 => BRATS_075.nii.gz
+[2023-10-12 00:24:41,710] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_393 => BRATS_393.nii.gz
+[2023-10-12 00:24:41,710] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_048 => BRATS_048.nii.gz
+[2023-10-12 00:24:41,710] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_175 => BRATS_175.nii.gz
+[2023-10-12 00:24:41,710] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_309 => BRATS_309.nii.gz
+[2023-10-12 00:24:41,711] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_013 => BRATS_013.nii.gz
+[2023-10-12 00:24:41,711] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_062 => BRATS_062.nii.gz
+[2023-10-12 00:24:41,711] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_433 => BRATS_433.nii.gz
+[2023-10-12 00:24:41,711] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_160 => BRATS_160.nii.gz
+[2023-10-12 00:24:41,711] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_187 => BRATS_187.nii.gz
+[2023-10-12 00:24:41,711] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_384 => BRATS_384.nii.gz
+[2023-10-12 00:24:41,711] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_085 => BRATS_085.nii.gz
+[2023-10-12 00:24:41,712] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_435 => BRATS_435.nii.gz
+[2023-10-12 00:24:41,712] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_431 => BRATS_431.nii.gz
+[2023-10-12 00:24:41,712] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_135 => BRATS_135.nii.gz
+[2023-10-12 00:24:41,712] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_247 => BRATS_247.nii.gz
+[2023-10-12 00:24:41,712] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_229 => BRATS_229.nii.gz
+[2023-10-12 00:24:41,712] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_206 => BRATS_206.nii.gz
+[2023-10-12 00:24:41,713] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_112 => BRATS_112.nii.gz
+[2023-10-12 00:24:41,713] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_318 => BRATS_318.nii.gz
+[2023-10-12 00:24:41,713] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_154 => BRATS_154.nii.gz
+[2023-10-12 00:24:41,713] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_397 => BRATS_397.nii.gz
+[2023-10-12 00:24:41,713] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_348 => BRATS_348.nii.gz
+[2023-10-12 00:24:41,713] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_286 => BRATS_286.nii.gz
+[2023-10-12 00:24:41,714] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_306 => BRATS_306.nii.gz
+[2023-10-12 00:24:41,714] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_398 => BRATS_398.nii.gz
+[2023-10-12 00:24:41,714] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_050 => BRATS_050.nii.gz
+[2023-10-12 00:24:41,714] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_207 => BRATS_207.nii.gz
+[2023-10-12 00:24:41,714] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_185 => BRATS_185.nii.gz
+[2023-10-12 00:24:41,714] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_110 => BRATS_110.nii.gz
+[2023-10-12 00:24:41,714] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_277 => BRATS_277.nii.gz
+[2023-10-12 00:24:41,715] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_472 => BRATS_472.nii.gz
+[2023-10-12 00:24:41,715] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_362 => BRATS_362.nii.gz
+[2023-10-12 00:24:41,715] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_368 => BRATS_368.nii.gz
+[2023-10-12 00:24:41,715] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_221 => BRATS_221.nii.gz
+[2023-10-12 00:24:41,715] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_412 => BRATS_412.nii.gz
+[2023-10-12 00:24:41,715] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_371 => BRATS_371.nii.gz
+[2023-10-12 00:24:41,715] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_280 => BRATS_280.nii.gz
+[2023-10-12 00:24:41,716] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_241 => BRATS_241.nii.gz
+[2023-10-12 00:24:41,716] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_200 => BRATS_200.nii.gz
+[2023-10-12 00:24:41,716] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_245 => BRATS_245.nii.gz
+[2023-10-12 00:24:41,716] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_361 => BRATS_361.nii.gz
+[2023-10-12 00:24:41,716] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_003 => BRATS_003.nii.gz
+[2023-10-12 00:24:41,716] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_457 => BRATS_457.nii.gz
+[2023-10-12 00:24:41,717] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_430 => BRATS_430.nii.gz
+[2023-10-12 00:24:41,717] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_078 => BRATS_078.nii.gz
+[2023-10-12 00:24:41,717] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_054 => BRATS_054.nii.gz
+[2023-10-12 00:24:41,717] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_419 => BRATS_419.nii.gz
+[2023-10-12 00:24:41,717] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_390 => BRATS_390.nii.gz
+[2023-10-12 00:24:41,717] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_255 => BRATS_255.nii.gz
+[2023-10-12 00:24:41,718] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_002 => BRATS_002.nii.gz
+[2023-10-12 00:24:41,718] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_089 => BRATS_089.nii.gz
+[2023-10-12 00:24:41,718] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_372 => BRATS_372.nii.gz
+[2023-10-12 00:24:41,718] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_246 => BRATS_246.nii.gz
+[2023-10-12 00:24:41,718] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_405 => BRATS_405.nii.gz
+[2023-10-12 00:24:41,718] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_232 => BRATS_232.nii.gz
+[2023-10-12 00:24:41,719] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_033 => BRATS_033.nii.gz
+[2023-10-12 00:24:41,719] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_355 => BRATS_355.nii.gz
+[2023-10-12 00:24:41,719] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_087 => BRATS_087.nii.gz
+[2023-10-12 00:24:41,719] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_285 => BRATS_285.nii.gz
+[2023-10-12 00:24:41,719] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_432 => BRATS_432.nii.gz
+[2023-10-12 00:24:41,719] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_418 => BRATS_418.nii.gz
+[2023-10-12 00:24:41,719] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_410 => BRATS_410.nii.gz
+[2023-10-12 00:24:41,719] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_021 => BRATS_021.nii.gz
+[2023-10-12 00:24:41,720] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_400 => BRATS_400.nii.gz
+[2023-10-12 00:24:41,720] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_370 => BRATS_370.nii.gz
+[2023-10-12 00:24:41,720] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_216 => BRATS_216.nii.gz
+[2023-10-12 00:24:41,720] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_022 => BRATS_022.nii.gz
+[2023-10-12 00:24:41,720] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_468 => BRATS_468.nii.gz
+[2023-10-12 00:24:41,720] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_297 => BRATS_297.nii.gz
+[2023-10-12 00:24:41,720] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_107 => BRATS_107.nii.gz
+[2023-10-12 00:24:41,721] [299321] [MainThread] [INFO] (monailabel.datastore.local:594) - Adding New Image: BRATS_102 => BRATS_102.nii.gz
+[2023-10-12 00:24:41,743] [299321] [MainThread] [INFO] (monailabel.datastore.local:577) - Invalidate count: 484
+[2023-10-12 00:24:41,761] [299321] [MainThread] [INFO] (monailabel.datastore.local:151) - Start observing external modifications on datastore (AUTO RELOAD)
+[2023-10-12 00:24:42,282] [299321] [MainThread] [INFO] (main:126) - +++ Adding Inferer:: deepedit => <lib.infers.deepedit.DeepEdit object at 0x7f8d38531e70>
+[2023-10-12 00:24:42,282] [299321] [MainThread] [INFO] (main:126) - +++ Adding Inferer:: deepedit_seg => <lib.infers.deepedit.DeepEdit object at 0x7f8d2af30cd0>
+[2023-10-12 00:24:42,283] [299321] [MainThread] [INFO] (main:191) - {'deepedit': <lib.infers.deepedit.DeepEdit object at 0x7f8d38531e70>, 'deepedit_seg': <lib.infers.deepedit.DeepEdit object at 0x7f8d2af30cd0>, 'Histogram+GraphCut': <monailabel.scribbles.infer.HistogramBasedGraphCut object at 0x7f8d2af30d30>, 'GMM+GraphCut': <monailabel.scribbles.infer.GMMBasedGraphCut object at 0x7f8d2af30d60>}
+[2023-10-12 00:24:42,283] [299321] [MainThread] [INFO] (main:206) - +++ Adding Trainer:: deepedit => <lib.trainers.deepedit.DeepEdit object at 0x7f8d2af30df0>
+[2023-10-12 00:24:42,284] [299321] [MainThread] [INFO] (monailabel.utils.sessions:51) - Session Path: /home/bbearce/.cache/monailabel/sessions
+[2023-10-12 00:24:42,284] [299321] [MainThread] [INFO] (monailabel.utils.sessions:52) - Session Expiry (max): 3600
+[2023-10-12 00:24:42,284] [299321] [MainThread] [INFO] (monailabel.interfaces.app:469) - App Init - completed
+[2023-10-12 00:24:42,285] [299321] [MainThread] [INFO] (timeloop:60) - Starting Timeloop..
+[2023-10-12 00:24:42,286] [299321] [MainThread] [INFO] (timeloop:42) - Registered job <function MONAILabelApp.on_init_complete.<locals>.run_scheduler at 0x7f8d2af28430>
+[2023-10-12 00:24:42,286] [299321] [MainThread] [INFO] (timeloop:63) - Timeloop now started. Jobs will run based on the interval set
+[2023-10-12 00:26:01,287] [299321] [MainThread] [INFO] (monailabel.endpoints.infer:161) - Infer Request: {'model': 'deepedit', 'image': 'BRATS_001'}
+[2023-10-12 00:26:01,287] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:277) - Infer Request (final): {'cache_transforms': True, 'cache_transforms_in_memory': True, 'cache_transforms_ttl': 300, 'device': 'cpu', 'model': 'deepedit', 'image': '/home/bbearce/Documents/monaiLabelExploration/datasets/Task01_BrainTumour/imagesTr/BRATS_001.nii.gz', 'description': 'A DeepEdit model for volumetric (3D) segmentation over 3D Images'}
+[2023-10-12 00:26:01,289] [299321] [MainThread] [INFO] (monailabel.utils.sessions:51) - Session Path: /home/bbearce/.cache/monailabel/cacheT
+[2023-10-12 00:26:01,289] [299321] [MainThread] [INFO] (monailabel.utils.sessions:52) - Session Expiry (max): 600
+[2023-10-12 00:26:01,291] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - PRE - Run Transform(s)
+[2023-10-12 00:26:01,291] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - PRE - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'image_path']
+[2023-10-12 00:26:01,291] [299321] [MainThread] [INFO] (monailabel.transform.cache:80) - Ignore; Failed to load image from Cache; memory:True
+[2023-10-12 00:26:01,292] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (LoadFromCache): Time: 0.0002; 
+[2023-10-12 00:26:01,292] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - PRE - Run Transform(s)
+[2023-10-12 00:26:01,292] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - PRE - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'image_path']
+[2023-10-12 00:26:06,055] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (LoadImaged): Time: 4.7621; image: torch.Size([240, 240, 155, 4])(torch.float32)
+[2023-10-12 00:26:06,057] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureChannelFirstd): Time: 0.002; image: torch.Size([4, 240, 240, 155])(torch.float32)
+[2023-10-12 00:26:06,060] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Orientationd): Time: 0.002; image: torch.Size([4, 240, 240, 155])(torch.float32)
+[2023-10-12 00:26:06,240] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (ScaleIntensityRanged): Time: 0.1796; image: torch.Size([4, 240, 240, 155])(torch.float32)
+[2023-10-12 00:26:06,279] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (CacheTransformDatad): Time: 0.0393; image: torch.Size([4, 240, 240, 155])(torch.float32)
+[2023-10-12 00:26:06,280] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (AddGuidanceFromPointsDeepEditd): Time: 0.0001; image: torch.Size([4, 240, 240, 155])(torch.float32)
+[2023-10-12 00:26:06,421] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Resized): Time: 0.1413; image: torch.Size([4, 128, 128, 128])(torch.float32)
+[2023-10-12 00:26:06,422] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (ResizeGuidanceMultipleLabelDeepEditd): Time: 0.0001; image: torch.Size([4, 128, 128, 128])(torch.float32)
+[2023-10-12 00:26:06,606] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (AddGuidanceSignalDeepEditd): Time: 0.1841; image: torch.Size([9, 128, 128, 128])(torch.float32)
+[2023-10-12 00:26:06,606] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureTyped): Time: 0.0001; image: torch.Size([9, 128, 128, 128])(torch.float32)
+[2023-10-12 00:26:06,607] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:480) - Inferer:: cpu => SimpleInferer => {}
+[2023-10-12 00:26:06,607] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:418) - Infer model path: /home/bbearce/Documents/monaiLabelExploration/apps/radiology/model/pretrained_deepedit_dynunet.pt
+[2023-10-12 00:26:14,544] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - INV - Run Transform(s)
+[2023-10-12 00:26:14,544] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - INV - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'image_path', 'image_meta_dict', 'latencies', 'guidance', 'pred']
+[2023-10-12 00:26:15,513] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - INV - Transform (Resized): Time: 0.9681; image: torch.Size([8, 240, 240, 155])(torch.float32); pred: torch.Size([8, 128, 128, 128])(torch.float32)
+[2023-10-12 00:26:15,516] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - INV - Transform (Orientationd): Time: 0.0024; image: torch.Size([8, 240, 240, 155])(torch.float32); pred: torch.Size([8, 128, 128, 128])(torch.float32)
+[2023-10-12 00:26:15,527] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - POST - Run Transform(s)
+[2023-10-12 00:26:15,527] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - POST - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'image_path', 'image_meta_dict', 'latencies', 'guidance', 'pred']
+[2023-10-12 00:26:15,528] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (EnsureTyped): Time: 0.0002; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([8, 240, 240, 155])(torch.float32)
+[2023-10-12 00:26:15,610] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (Activationsd): Time: 0.0816; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([8, 240, 240, 155])(torch.float32)
+[2023-10-12 00:26:16,641] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (AsDiscreted): Time: 1.0304; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([1, 240, 240, 155])(torch.float32)
+[2023-10-12 00:26:16,641] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (SqueezeDimd): Time: 0.0002; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([240, 240, 155])(torch.float32)
+[2023-10-12 00:26:16,642] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (ToNumpyd): Time: 0.0002; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: (240, 240, 155)(float32)
+[2023-10-12 00:26:16,642] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (Restored): Time: 0.0001; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: (240, 240, 155)(float32)
+[2023-10-12 00:26:16,663] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:580) - Writing Result...
+[2023-10-12 00:26:16,663] [299321] [MainThread] [INFO] (monailabel.transform.writer:196) - Result ext: .nii.gz; write_to_file: True; dtype: None
+[2023-10-12 00:26:16,808] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:332) - ++ Latencies => Total: 15.5212; Pre: 5.3192; Inferer: 7.9033; Invert: 1.0166; Post: 1.1360; Write: 0.1456
+[2023-10-12 00:26:16,808] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:356) - Result File: /tmp/tmpuw1uucgy.nii.gz
+[2023-10-12 00:26:16,808] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:357) - Result Json Keys: ['label_names', 'latencies']
+[2023-10-12 00:48:28,646] [299321] [MainThread] [INFO] (monailabel.endpoints.infer:161) - Infer Request: {'model': 'deepedit', 'image': '/tmp/tmpi9h8jc_w.nii.gz'}
+[2023-10-12 00:48:28,647] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:277) - Infer Request (final): {'cache_transforms': True, 'cache_transforms_in_memory': True, 'cache_transforms_ttl': 300, 'device': 'cpu', 'model': 'deepedit', 'image': '/tmp/tmpi9h8jc_w.nii.gz', 'description': 'A DeepEdit model for volumetric (3D) segmentation over 3D Images', 'save_label': False}
+[2023-10-12 00:48:28,648] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - PRE - Run Transform(s)
+[2023-10-12 00:48:28,648] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - PRE - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path']
+[2023-10-12 00:48:28,648] [299321] [MainThread] [INFO] (monailabel.transform.cache:80) - Ignore; Failed to load image from Cache; memory:True
+[2023-10-12 00:48:28,648] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (LoadFromCache): Time: 0.0002; 
+[2023-10-12 00:48:28,649] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - PRE - Run Transform(s)
+[2023-10-12 00:48:28,649] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - PRE - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path']
+[2023-10-12 00:48:29,428] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (LoadImaged): Time: 0.7785; image: torch.Size([240, 240, 155, 4])(torch.float32)
+[2023-10-12 00:48:29,429] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureChannelFirstd): Time: 0.0004; image: torch.Size([4, 240, 240, 155])(torch.float32)
+[2023-10-12 00:48:29,432] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Orientationd): Time: 0.0025; image: torch.Size([4, 240, 240, 155])(torch.float32)
+[2023-10-12 00:48:29,601] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (ScaleIntensityRanged): Time: 0.1692; image: torch.Size([4, 240, 240, 155])(torch.float32)
+[2023-10-12 00:48:29,625] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (CacheTransformDatad): Time: 0.0237; image: torch.Size([4, 240, 240, 155])(torch.float32)
+[2023-10-12 00:48:29,626] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (AddGuidanceFromPointsDeepEditd): Time: 0.0001; image: torch.Size([4, 240, 240, 155])(torch.float32)
+[2023-10-12 00:48:29,757] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Resized): Time: 0.1313; image: torch.Size([4, 128, 128, 128])(torch.float32)
+[2023-10-12 00:48:29,758] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (ResizeGuidanceMultipleLabelDeepEditd): Time: 0.0001; image: torch.Size([4, 128, 128, 128])(torch.float32)
+[2023-10-12 00:48:29,910] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (AddGuidanceSignalDeepEditd): Time: 0.1523; image: torch.Size([9, 128, 128, 128])(torch.float32)
+[2023-10-12 00:48:29,911] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureTyped): Time: 0.0001; image: torch.Size([9, 128, 128, 128])(torch.float32)
+[2023-10-12 00:48:29,911] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:480) - Inferer:: cpu => SimpleInferer => {}
+[2023-10-12 00:48:29,911] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:418) - Infer model path: /home/bbearce/Documents/monaiLabelExploration/apps/radiology/model/pretrained_deepedit_dynunet.pt
+[2023-10-12 00:48:37,824] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - INV - Run Transform(s)
+[2023-10-12 00:48:37,824] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - INV - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path', 'image_meta_dict', 'latencies', 'guidance', 'pred']
+[2023-10-12 00:48:38,815] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - INV - Transform (Resized): Time: 0.9899; image: torch.Size([8, 240, 240, 155])(torch.float32); pred: torch.Size([8, 128, 128, 128])(torch.float32)
+[2023-10-12 00:48:38,818] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - INV - Transform (Orientationd): Time: 0.0028; image: torch.Size([8, 240, 240, 155])(torch.float32); pred: torch.Size([8, 128, 128, 128])(torch.float32)
+[2023-10-12 00:48:38,831] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - POST - Run Transform(s)
+[2023-10-12 00:48:38,831] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - POST - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path', 'image_meta_dict', 'latencies', 'guidance', 'pred']
+[2023-10-12 00:48:38,832] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (EnsureTyped): Time: 0.0003; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([8, 240, 240, 155])(torch.float32)
+[2023-10-12 00:48:38,921] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (Activationsd): Time: 0.0878; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([8, 240, 240, 155])(torch.float32)
+[2023-10-12 00:48:40,092] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (AsDiscreted): Time: 1.1709; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([1, 240, 240, 155])(torch.float32)
+[2023-10-12 00:48:40,093] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (SqueezeDimd): Time: 0.0003; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([240, 240, 155])(torch.float32)
+[2023-10-12 00:48:40,094] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (ToNumpyd): Time: 0.0002; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: (240, 240, 155)(float32)
+[2023-10-12 00:48:40,094] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (Restored): Time: 0.0001; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: (240, 240, 155)(float32)
+[2023-10-12 00:48:40,119] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:580) - Writing Result...
+[2023-10-12 00:48:40,120] [299321] [MainThread] [INFO] (monailabel.transform.writer:196) - Result ext: .nii.gz; write_to_file: True; dtype: None
+[2023-10-12 00:48:40,266] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:332) - ++ Latencies => Total: 11.6197; Pre: 1.2642; Inferer: 7.8841; Invert: 1.0354; Post: 1.2884; Write: 0.1472
+[2023-10-12 00:48:40,266] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:356) - Result File: /tmp/tmpi8kg08hh.nii.gz
+[2023-10-12 00:48:40,267] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:357) - Result Json Keys: ['label_names', 'latencies']
+[2023-10-12 01:01:08,415] [299321] [MainThread] [INFO] (monailabel.endpoints.infer:161) - Infer Request: {'model': 'deepedit', 'image': '/tmp/tmpiu9z4iyh.jpg'}
+[2023-10-12 01:01:08,415] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:277) - Infer Request (final): {'cache_transforms': True, 'cache_transforms_in_memory': True, 'cache_transforms_ttl': 300, 'device': 'cpu', 'model': 'deepedit', 'image': '/tmp/tmpiu9z4iyh.jpg', 'description': 'A DeepEdit model for volumetric (3D) segmentation over 3D Images', 'save_label': False}
+[2023-10-12 01:01:08,416] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - PRE - Run Transform(s)
+[2023-10-12 01:01:08,416] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - PRE - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path']
+[2023-10-12 01:01:08,416] [299321] [MainThread] [INFO] (monailabel.transform.cache:80) - Ignore; Failed to load image from Cache; memory:True
+[2023-10-12 01:01:08,416] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (LoadFromCache): Time: 0.0001; 
+[2023-10-12 01:01:08,417] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - PRE - Run Transform(s)
+[2023-10-12 01:01:08,417] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - PRE - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path']
+[2023-10-12 01:01:08,434] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (LoadImaged): Time: 0.0169; image: torch.Size([240, 240, 3])(torch.float32)
+[2023-10-12 01:01:08,435] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureChannelFirstd): Time: 0.0002; image: torch.Size([3, 240, 240])(torch.float32)
+[2023-10-12 01:01:08,439] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Orientationd): Time: 0.0037; image: torch.Size([3, 240, 240])(torch.float32)
+[2023-10-12 01:01:08,440] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (ScaleIntensityRanged): Time: 0.0012; image: torch.Size([3, 240, 240])(torch.float32)
+[2023-10-12 01:01:08,442] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (CacheTransformDatad): Time: 0.0013; image: torch.Size([3, 240, 240])(torch.float32)
+[2023-10-12 01:01:08,442] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (AddGuidanceFromPointsDeepEditd): Time: 0.0001; image: torch.Size([3, 240, 240])(torch.float32)
+[2023-10-12 01:01:08,567] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Resized): Time: 0.1247; image: torch.Size([3, 128, 128, 128])(torch.float32)
+[2023-10-12 01:14:28,932] [299321] [MainThread] [INFO] (monailabel.endpoints.infer:161) - Infer Request: {'model': 'deepedit', 'image': '/tmp/tmphgd1di21.nii.gz'}
+[2023-10-12 01:14:28,932] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:277) - Infer Request (final): {'cache_transforms': True, 'cache_transforms_in_memory': True, 'cache_transforms_ttl': 300, 'device': 'cpu', 'model': 'deepedit', 'image': '/tmp/tmphgd1di21.nii.gz', 'description': 'A DeepEdit model for volumetric (3D) segmentation over 3D Images', 'save_label': False}
+[2023-10-12 01:14:28,933] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - PRE - Run Transform(s)
+[2023-10-12 01:14:28,933] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - PRE - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path']
+[2023-10-12 01:14:28,934] [299321] [MainThread] [INFO] (monailabel.transform.cache:80) - Ignore; Failed to load image from Cache; memory:True
+[2023-10-12 01:14:28,934] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (LoadFromCache): Time: 0.0003; 
+[2023-10-12 01:14:28,935] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - PRE - Run Transform(s)
+[2023-10-12 01:14:28,935] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - PRE - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path']
+[2023-10-12 01:14:28,949] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (LoadImaged): Time: 0.0137; image: torch.Size([240, 240, 1, 4])(torch.float32)
+[2023-10-12 01:14:28,950] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureChannelFirstd): Time: 0.0003; image: torch.Size([4, 240, 240, 1])(torch.float32)
+[2023-10-12 01:14:28,952] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Orientationd): Time: 0.0022; image: torch.Size([4, 240, 240, 1])(torch.float32)
+[2023-10-12 01:14:28,954] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (ScaleIntensityRanged): Time: 0.0011; image: torch.Size([4, 240, 240, 1])(torch.float32)
+[2023-10-12 01:14:28,955] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (CacheTransformDatad): Time: 0.001; image: torch.Size([4, 240, 240, 1])(torch.float32)
+[2023-10-12 01:14:28,955] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (AddGuidanceFromPointsDeepEditd): Time: 0.0001; image: torch.Size([4, 240, 240, 1])(torch.float32)
+[2023-10-12 01:14:29,081] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Resized): Time: 0.1258; image: torch.Size([4, 128, 128, 128])(torch.float32)
+[2023-10-12 01:14:29,082] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (ResizeGuidanceMultipleLabelDeepEditd): Time: 0.0001; image: torch.Size([4, 128, 128, 128])(torch.float32)
+[2023-10-12 01:14:29,239] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (AddGuidanceSignalDeepEditd): Time: 0.157; image: torch.Size([9, 128, 128, 128])(torch.float32)
+[2023-10-12 01:14:29,239] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureTyped): Time: 0.0001; image: torch.Size([9, 128, 128, 128])(torch.float32)
+[2023-10-12 01:14:29,239] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:480) - Inferer:: cpu => SimpleInferer => {}
+[2023-10-12 01:14:29,240] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:418) - Infer model path: /home/bbearce/Documents/monaiLabelExploration/apps/radiology/model/pretrained_deepedit_dynunet.pt
+[2023-10-12 01:14:35,642] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - INV - Run Transform(s)
+[2023-10-12 01:14:35,642] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - INV - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path', 'image_meta_dict', 'latencies', 'guidance', 'pred']
+[2023-10-12 01:14:35,698] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - INV - Transform (Resized): Time: 0.0546; image: torch.Size([8, 240, 240, 1])(torch.float32); pred: torch.Size([8, 128, 128, 128])(torch.float32)
+[2023-10-12 01:14:35,701] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - INV - Transform (Orientationd): Time: 0.0028; image: torch.Size([8, 240, 240, 1])(torch.float32); pred: torch.Size([8, 128, 128, 128])(torch.float32)
+[2023-10-12 01:14:35,714] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - POST - Run Transform(s)
+[2023-10-12 01:14:35,714] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - POST - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path', 'image_meta_dict', 'latencies', 'guidance', 'pred']
+[2023-10-12 01:14:35,715] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (EnsureTyped): Time: 0.0002; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([8, 240, 240, 1])(torch.float32)
+[2023-10-12 01:14:35,716] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (Activationsd): Time: 0.0009; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([8, 240, 240, 1])(torch.float32)
+[2023-10-12 01:14:35,723] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (AsDiscreted): Time: 0.0064; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([1, 240, 240, 1])(torch.float32)
+[2023-10-12 01:14:35,723] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (SqueezeDimd): Time: 0.0003; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([240, 240, 1])(torch.float32)
+[2023-10-12 01:14:35,724] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (ToNumpyd): Time: 0.0003; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: (240, 240, 1)(float32)
+[2023-10-12 01:14:35,724] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (Restored): Time: 0.0001; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: (240, 240, 1)(float32)
+[2023-10-12 01:14:35,725] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:580) - Writing Result...
+[2023-10-12 01:14:35,725] [299321] [MainThread] [INFO] (monailabel.transform.writer:196) - Result ext: .nii.gz; write_to_file: True; dtype: None
+[2023-10-12 01:14:35,729] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:332) - ++ Latencies => Total: 6.7972; Pre: 0.3070; Inferer: 6.3738; Invert: 0.0999; Post: 0.0115; Write: 0.0044
+[2023-10-12 01:14:35,730] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:356) - Result File: /tmp/tmp7z8oux0_.nii.gz
+[2023-10-12 01:14:35,730] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:357) - Result Json Keys: ['label_names', 'latencies']
+[2023-10-12 01:53:11,371] [299321] [MainThread] [INFO] (monailabel.endpoints.infer:161) - Infer Request: {'model': 'deepedit', 'image': '/tmp/tmpa2c5mybz.nii.gz'}
+[2023-10-12 01:53:11,372] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:277) - Infer Request (final): {'cache_transforms': True, 'cache_transforms_in_memory': True, 'cache_transforms_ttl': 300, 'device': 'cpu', 'model': 'deepedit', 'image': '/tmp/tmpa2c5mybz.nii.gz', 'description': 'A DeepEdit model for volumetric (3D) segmentation over 3D Images', 'save_label': False}
+[2023-10-12 01:53:11,372] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - PRE - Run Transform(s)
+[2023-10-12 01:53:11,373] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - PRE - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path']
+[2023-10-12 01:53:11,373] [299321] [MainThread] [INFO] (monailabel.transform.cache:80) - Ignore; Failed to load image from Cache; memory:True
+[2023-10-12 01:53:11,373] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (LoadFromCache): Time: 0.0001; 
+[2023-10-12 01:53:11,373] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - PRE - Run Transform(s)
+[2023-10-12 01:53:11,373] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - PRE - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path']
+[2023-10-12 01:53:12,102] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (LoadImaged): Time: 0.7282; image: torch.Size([240, 240, 155, 4])(torch.float32)
+[2023-10-12 01:53:12,103] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureChannelFirstd): Time: 0.0003; image: torch.Size([4, 240, 240, 155])(torch.float32)
+[2023-10-12 01:53:12,106] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Orientationd): Time: 0.0026; image: torch.Size([4, 240, 240, 155])(torch.float32)
+[2023-10-12 01:53:12,264] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (ScaleIntensityRanged): Time: 0.158; image: torch.Size([4, 240, 240, 155])(torch.float32)
+[2023-10-12 01:53:12,289] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (CacheTransformDatad): Time: 0.0242; image: torch.Size([4, 240, 240, 155])(torch.float32)
+[2023-10-12 01:53:12,289] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (AddGuidanceFromPointsDeepEditd): Time: 0.0001; image: torch.Size([4, 240, 240, 155])(torch.float32)
+[2023-10-12 01:53:12,444] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Resized): Time: 0.1548; image: torch.Size([4, 128, 128, 128])(torch.float32)
+[2023-10-12 01:53:12,444] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (ResizeGuidanceMultipleLabelDeepEditd): Time: 0.0001; image: torch.Size([4, 128, 128, 128])(torch.float32)
+[2023-10-12 01:53:12,590] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (AddGuidanceSignalDeepEditd): Time: 0.1452; image: torch.Size([9, 128, 128, 128])(torch.float32)
+[2023-10-12 01:53:12,590] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureTyped): Time: 0.0001; image: torch.Size([9, 128, 128, 128])(torch.float32)
+[2023-10-12 01:53:12,590] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:480) - Inferer:: cpu => SimpleInferer => {}
+[2023-10-12 01:53:12,590] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:418) - Infer model path: /home/bbearce/Documents/monaiLabelExploration/apps/radiology/model/pretrained_deepedit_dynunet.pt
+[2023-10-12 01:53:19,758] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - INV - Run Transform(s)
+[2023-10-12 01:53:19,759] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - INV - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path', 'image_meta_dict', 'latencies', 'guidance', 'pred']
+[2023-10-12 01:53:20,931] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - INV - Transform (Resized): Time: 1.1711; image: torch.Size([8, 240, 240, 155])(torch.float32); pred: torch.Size([8, 128, 128, 128])(torch.float32)
+[2023-10-12 01:53:20,935] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - INV - Transform (Orientationd): Time: 0.004; image: torch.Size([8, 240, 240, 155])(torch.float32); pred: torch.Size([8, 128, 128, 128])(torch.float32)
+[2023-10-12 01:53:20,951] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - POST - Run Transform(s)
+[2023-10-12 01:53:20,951] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - POST - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path', 'image_meta_dict', 'latencies', 'guidance', 'pred']
+[2023-10-12 01:53:20,952] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (EnsureTyped): Time: 0.0002; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([8, 240, 240, 155])(torch.float32)
+[2023-10-12 01:53:21,059] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (Activationsd): Time: 0.1064; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([8, 240, 240, 155])(torch.float32)
+[2023-10-12 01:53:22,214] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (AsDiscreted): Time: 1.154; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([1, 240, 240, 155])(torch.float32)
+[2023-10-12 01:53:22,214] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (SqueezeDimd): Time: 0.0002; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([240, 240, 155])(torch.float32)
+[2023-10-12 01:53:22,215] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (ToNumpyd): Time: 0.0002; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: (240, 240, 155)(float32)
+[2023-10-12 01:53:22,215] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (Restored): Time: 0.0001; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: (240, 240, 155)(float32)
+[2023-10-12 01:53:22,236] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:580) - Writing Result...
+[2023-10-12 01:53:22,237] [299321] [MainThread] [INFO] (monailabel.transform.writer:196) - Result ext: .nii.gz; write_to_file: True; dtype: None
+[2023-10-12 01:53:22,373] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:332) - ++ Latencies => Total: 11.0020; Pre: 1.2185; Inferer: 7.1324; Invert: 1.2274; Post: 1.2863; Write: 0.1370
+[2023-10-12 01:53:22,374] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:356) - Result File: /tmp/tmpbbirnkcl.nii.gz
+[2023-10-12 01:53:22,374] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:357) - Result Json Keys: ['label_names', 'latencies']
+[2023-10-12 01:53:54,858] [299321] [MainThread] [INFO] (monailabel.endpoints.infer:161) - Infer Request: {'model': 'deepedit', 'image': '/tmp/tmptm7gcn02.nii.gz'}
+[2023-10-12 01:53:54,859] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:277) - Infer Request (final): {'cache_transforms': True, 'cache_transforms_in_memory': True, 'cache_transforms_ttl': 300, 'device': 'cpu', 'model': 'deepedit', 'image': '/tmp/tmptm7gcn02.nii.gz', 'description': 'A DeepEdit model for volumetric (3D) segmentation over 3D Images', 'save_label': False}
+[2023-10-12 01:53:54,860] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - PRE - Run Transform(s)
+[2023-10-12 01:53:54,860] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - PRE - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path']
+[2023-10-12 01:53:54,860] [299321] [MainThread] [INFO] (monailabel.transform.cache:80) - Ignore; Failed to load image from Cache; memory:True
+[2023-10-12 01:53:54,860] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (LoadFromCache): Time: 0.0002; 
+[2023-10-12 01:53:54,861] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - PRE - Run Transform(s)
+[2023-10-12 01:53:54,861] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - PRE - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path']
+[2023-10-12 01:53:55,650] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (LoadImaged): Time: 0.7892; image: torch.Size([240, 240, 155, 4])(torch.float32)
+[2023-10-12 01:53:55,651] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureChannelFirstd): Time: 0.0003; image: torch.Size([4, 240, 240, 155])(torch.float32)
+[2023-10-12 01:53:55,654] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Orientationd): Time: 0.0022; image: torch.Size([4, 240, 240, 155])(torch.float32)
+[2023-10-12 01:53:55,837] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (ScaleIntensityRanged): Time: 0.1825; image: torch.Size([4, 240, 240, 155])(torch.float32)
+[2023-10-12 01:53:55,865] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (CacheTransformDatad): Time: 0.0277; image: torch.Size([4, 240, 240, 155])(torch.float32)
+[2023-10-12 01:53:55,865] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (AddGuidanceFromPointsDeepEditd): Time: 0.0001; image: torch.Size([4, 240, 240, 155])(torch.float32)
+[2023-10-12 01:53:56,030] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Resized): Time: 0.1641; image: torch.Size([4, 128, 128, 128])(torch.float32)
+[2023-10-12 01:53:56,030] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (ResizeGuidanceMultipleLabelDeepEditd): Time: 0.0002; image: torch.Size([4, 128, 128, 128])(torch.float32)
+[2023-10-12 01:53:56,189] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (AddGuidanceSignalDeepEditd): Time: 0.1583; image: torch.Size([9, 128, 128, 128])(torch.float32)
+[2023-10-12 01:53:56,189] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureTyped): Time: 0.0001; image: torch.Size([9, 128, 128, 128])(torch.float32)
+[2023-10-12 01:53:56,189] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:480) - Inferer:: cpu => SimpleInferer => {}
+[2023-10-12 01:53:56,190] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:418) - Infer model path: /home/bbearce/Documents/monaiLabelExploration/apps/radiology/model/pretrained_deepedit_dynunet.pt
+[2023-10-12 01:54:02,468] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - INV - Run Transform(s)
+[2023-10-12 01:54:02,469] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - INV - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path', 'image_meta_dict', 'latencies', 'guidance', 'pred']
+[2023-10-12 01:54:03,419] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - INV - Transform (Resized): Time: 0.9502; image: torch.Size([8, 240, 240, 155])(torch.float32); pred: torch.Size([8, 128, 128, 128])(torch.float32)
+[2023-10-12 01:54:03,423] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - INV - Transform (Orientationd): Time: 0.003; image: torch.Size([8, 240, 240, 155])(torch.float32); pred: torch.Size([8, 128, 128, 128])(torch.float32)
+[2023-10-12 01:54:03,435] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - POST - Run Transform(s)
+[2023-10-12 01:54:03,435] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - POST - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path', 'image_meta_dict', 'latencies', 'guidance', 'pred']
+[2023-10-12 01:54:03,436] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (EnsureTyped): Time: 0.0001; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([8, 240, 240, 155])(torch.float32)
+[2023-10-12 01:54:03,514] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (Activationsd): Time: 0.0775; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([8, 240, 240, 155])(torch.float32)
+[2023-10-12 01:54:04,545] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (AsDiscreted): Time: 1.0306; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([1, 240, 240, 155])(torch.float32)
+[2023-10-12 01:54:04,545] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (SqueezeDimd): Time: 0.0002; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([240, 240, 155])(torch.float32)
+[2023-10-12 01:54:04,546] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (ToNumpyd): Time: 0.0002; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: (240, 240, 155)(float32)
+[2023-10-12 01:54:04,546] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (Restored): Time: 0.0001; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: (240, 240, 155)(float32)
+[2023-10-12 01:54:04,565] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:580) - Writing Result...
+[2023-10-12 01:54:04,565] [299321] [MainThread] [INFO] (monailabel.transform.writer:196) - Result ext: .nii.gz; write_to_file: True; dtype: None
+[2023-10-12 01:54:04,684] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:332) - ++ Latencies => Total: 9.8253; Pre: 1.3304; Inferer: 6.2510; Invert: 0.9939; Post: 1.1305; Write: 0.1190
+[2023-10-12 01:54:04,684] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:356) - Result File: /tmp/tmp2951itzf.nii.gz
+[2023-10-12 01:54:04,684] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:357) - Result Json Keys: ['label_names', 'latencies']
+[2023-10-12 02:27:03,484] [299321] [MainThread] [INFO] (monailabel.endpoints.infer:161) - Infer Request: {'model': 'deepedit', 'image': '/tmp/tmp4z78od7g.nii.gz'}
+[2023-10-12 02:27:03,485] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:277) - Infer Request (final): {'cache_transforms': True, 'cache_transforms_in_memory': True, 'cache_transforms_ttl': 300, 'device': 'cpu', 'model': 'deepedit', 'image': '/tmp/tmp4z78od7g.nii.gz', 'description': 'A DeepEdit model for volumetric (3D) segmentation over 3D Images', 'save_label': False}
+[2023-10-12 02:27:03,487] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - PRE - Run Transform(s)
+[2023-10-12 02:27:03,487] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - PRE - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path']
+[2023-10-12 02:27:03,488] [299321] [MainThread] [INFO] (monailabel.transform.cache:80) - Ignore; Failed to load image from Cache; memory:True
+[2023-10-12 02:27:03,488] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (LoadFromCache): Time: 0.0004; 
+[2023-10-12 02:27:03,489] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - PRE - Run Transform(s)
+[2023-10-12 02:27:03,489] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - PRE - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path']
+[2023-10-12 02:27:03,524] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (LoadImaged): Time: 0.0337; image: torch.Size([240, 240, 1, 4])(torch.float32)
+[2023-10-12 02:27:03,525] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureChannelFirstd): Time: 0.0005; image: torch.Size([4, 240, 240, 1])(torch.float32)
+[2023-10-12 02:27:03,528] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Orientationd): Time: 0.0029; image: torch.Size([4, 240, 240, 1])(torch.float32)
+[2023-10-12 02:27:03,531] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (ScaleIntensityRanged): Time: 0.0022; image: torch.Size([4, 240, 240, 1])(torch.float32)
+[2023-10-12 02:27:03,533] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (CacheTransformDatad): Time: 0.0017; image: torch.Size([4, 240, 240, 1])(torch.float32)
+[2023-10-12 02:27:03,534] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (AddGuidanceFromPointsDeepEditd): Time: 0.0002; image: torch.Size([4, 240, 240, 1])(torch.float32)
+[2023-10-12 02:27:03,636] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Resized): Time: 0.1016; image: torch.Size([4, 128, 128, 128])(torch.float32)
+[2023-10-12 02:27:03,636] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (ResizeGuidanceMultipleLabelDeepEditd): Time: 0.0001; image: torch.Size([4, 128, 128, 128])(torch.float32)
+[2023-10-12 02:27:03,782] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (AddGuidanceSignalDeepEditd): Time: 0.1455; image: torch.Size([9, 128, 128, 128])(torch.float32)
+[2023-10-12 02:27:03,782] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureTyped): Time: 0.0001; image: torch.Size([9, 128, 128, 128])(torch.float32)
+[2023-10-12 02:27:03,782] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:480) - Inferer:: cpu => SimpleInferer => {}
+[2023-10-12 02:27:03,782] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:418) - Infer model path: /home/bbearce/Documents/monaiLabelExploration/apps/radiology/model/pretrained_deepedit_dynunet.pt
+[2023-10-12 02:27:10,110] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - INV - Run Transform(s)
+[2023-10-12 02:27:10,111] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - INV - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path', 'image_meta_dict', 'latencies', 'guidance', 'pred']
+[2023-10-12 02:27:10,168] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - INV - Transform (Resized): Time: 0.0568; image: torch.Size([8, 240, 240, 1])(torch.float32); pred: torch.Size([8, 128, 128, 128])(torch.float32)
+[2023-10-12 02:27:10,170] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - INV - Transform (Orientationd): Time: 0.0018; image: torch.Size([8, 240, 240, 1])(torch.float32); pred: torch.Size([8, 128, 128, 128])(torch.float32)
+[2023-10-12 02:27:10,182] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - POST - Run Transform(s)
+[2023-10-12 02:27:10,182] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - POST - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path', 'image_meta_dict', 'latencies', 'guidance', 'pred']
+[2023-10-12 02:27:10,183] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (EnsureTyped): Time: 0.0001; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([8, 240, 240, 1])(torch.float32)
+[2023-10-12 02:27:10,184] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (Activationsd): Time: 0.0007; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([8, 240, 240, 1])(torch.float32)
+[2023-10-12 02:27:10,190] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (AsDiscreted): Time: 0.0063; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([1, 240, 240, 1])(torch.float32)
+[2023-10-12 02:27:10,191] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (SqueezeDimd): Time: 0.0002; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([240, 240, 1])(torch.float32)
+[2023-10-12 02:27:10,191] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (ToNumpyd): Time: 0.0002; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: (240, 240, 1)(float32)
+[2023-10-12 02:27:10,191] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (Restored): Time: 0.0001; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: (240, 240, 1)(float32)
+[2023-10-12 02:27:10,192] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:580) - Writing Result...
+[2023-10-12 02:27:10,192] [299321] [MainThread] [INFO] (monailabel.transform.writer:196) - Result ext: .nii.gz; write_to_file: True; dtype: None
+[2023-10-12 02:27:10,195] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:332) - ++ Latencies => Total: 6.7103; Pre: 0.2969; Inferer: 6.3031; Invert: 0.0961; Post: 0.0101; Write: 0.0034
+[2023-10-12 02:27:10,195] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:356) - Result File: /tmp/tmp8z8alm92.nii.gz
+[2023-10-12 02:27:10,195] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:357) - Result Json Keys: ['label_names', 'latencies']
+[2023-10-12 02:27:43,007] [299321] [MainThread] [INFO] (monailabel.endpoints.infer:161) - Infer Request: {'model': 'deepedit', 'image': '/tmp/tmpq_qezabd.nii.gz'}
+[2023-10-12 02:27:43,008] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:277) - Infer Request (final): {'cache_transforms': True, 'cache_transforms_in_memory': True, 'cache_transforms_ttl': 300, 'device': 'cpu', 'model': 'deepedit', 'image': '/tmp/tmpq_qezabd.nii.gz', 'description': 'A DeepEdit model for volumetric (3D) segmentation over 3D Images', 'save_label': False}
+[2023-10-12 02:27:43,010] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - PRE - Run Transform(s)
+[2023-10-12 02:27:43,010] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - PRE - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path']
+[2023-10-12 02:27:43,011] [299321] [MainThread] [INFO] (monailabel.transform.cache:80) - Ignore; Failed to load image from Cache; memory:True
+[2023-10-12 02:27:43,012] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (LoadFromCache): Time: 0.0006; 
+[2023-10-12 02:27:43,013] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - PRE - Run Transform(s)
+[2023-10-12 02:27:43,013] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - PRE - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path']
+[2023-10-12 02:27:43,025] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (LoadImaged): Time: 0.0117; image: torch.Size([240, 240, 1, 4])(torch.float32)
+[2023-10-12 02:27:43,026] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureChannelFirstd): Time: 0.0005; image: torch.Size([4, 240, 240, 1])(torch.float32)
+[2023-10-12 02:27:43,029] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Orientationd): Time: 0.0023; image: torch.Size([4, 240, 240, 1])(torch.float32)
+[2023-10-12 02:27:43,031] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (ScaleIntensityRanged): Time: 0.0017; image: torch.Size([4, 240, 240, 1])(torch.float32)
+[2023-10-12 02:27:43,033] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (CacheTransformDatad): Time: 0.0013; image: torch.Size([4, 240, 240, 1])(torch.float32)
+[2023-10-12 02:27:43,033] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (AddGuidanceFromPointsDeepEditd): Time: 0.0001; image: torch.Size([4, 240, 240, 1])(torch.float32)
+[2023-10-12 02:27:43,153] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Resized): Time: 0.12; image: torch.Size([4, 128, 128, 128])(torch.float32)
+[2023-10-12 02:27:43,154] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (ResizeGuidanceMultipleLabelDeepEditd): Time: 0.0001; image: torch.Size([4, 128, 128, 128])(torch.float32)
+[2023-10-12 02:27:43,297] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (AddGuidanceSignalDeepEditd): Time: 0.1436; image: torch.Size([9, 128, 128, 128])(torch.float32)
+[2023-10-12 02:27:43,298] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureTyped): Time: 0.0001; image: torch.Size([9, 128, 128, 128])(torch.float32)
+[2023-10-12 02:27:43,298] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:480) - Inferer:: cpu => SimpleInferer => {}
+[2023-10-12 02:27:43,298] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:418) - Infer model path: /home/bbearce/Documents/monaiLabelExploration/apps/radiology/model/pretrained_deepedit_dynunet.pt
+[2023-10-12 02:27:49,556] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - INV - Run Transform(s)
+[2023-10-12 02:27:49,556] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - INV - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path', 'image_meta_dict', 'latencies', 'guidance', 'pred']
+[2023-10-12 02:27:49,613] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - INV - Transform (Resized): Time: 0.0555; image: torch.Size([8, 240, 240, 1])(torch.float32); pred: torch.Size([8, 128, 128, 128])(torch.float32)
+[2023-10-12 02:27:49,615] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - INV - Transform (Orientationd): Time: 0.0019; image: torch.Size([8, 240, 240, 1])(torch.float32); pred: torch.Size([8, 128, 128, 128])(torch.float32)
+[2023-10-12 02:27:49,626] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - POST - Run Transform(s)
+[2023-10-12 02:27:49,627] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - POST - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path', 'image_meta_dict', 'latencies', 'guidance', 'pred']
+[2023-10-12 02:27:49,627] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (EnsureTyped): Time: 0.0001; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([8, 240, 240, 1])(torch.float32)
+[2023-10-12 02:27:49,628] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (Activationsd): Time: 0.0008; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([8, 240, 240, 1])(torch.float32)
+[2023-10-12 02:27:49,634] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (AsDiscreted): Time: 0.0058; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([1, 240, 240, 1])(torch.float32)
+[2023-10-12 02:27:49,635] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (SqueezeDimd): Time: 0.0002; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([240, 240, 1])(torch.float32)
+[2023-10-12 02:27:49,635] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (ToNumpyd): Time: 0.0002; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: (240, 240, 1)(float32)
+[2023-10-12 02:27:49,636] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (Restored): Time: 0.0001; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: (240, 240, 1)(float32)
+[2023-10-12 02:27:49,636] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:580) - Writing Result...
+[2023-10-12 02:27:49,636] [299321] [MainThread] [INFO] (monailabel.transform.writer:196) - Result ext: .nii.gz; write_to_file: True; dtype: None
+[2023-10-12 02:27:49,638] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:332) - ++ Latencies => Total: 6.6305; Pre: 0.2894; Inferer: 6.2342; Invert: 0.0940; Post: 0.0096; Write: 0.0025
+[2023-10-12 02:27:49,638] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:356) - Result File: /tmp/tmpnelsa4g8.nii.gz
+[2023-10-12 02:27:49,638] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:357) - Result Json Keys: ['label_names', 'latencies']
+[2023-10-12 02:28:31,241] [299321] [MainThread] [INFO] (monailabel.endpoints.infer:161) - Infer Request: {'model': 'deepedit', 'image': '/tmp/tmpa2cvq190.nii.gz'}
+[2023-10-12 02:28:31,241] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:277) - Infer Request (final): {'cache_transforms': True, 'cache_transforms_in_memory': True, 'cache_transforms_ttl': 300, 'device': 'cpu', 'model': 'deepedit', 'image': '/tmp/tmpa2cvq190.nii.gz', 'description': 'A DeepEdit model for volumetric (3D) segmentation over 3D Images', 'save_label': False}
+[2023-10-12 02:28:31,242] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - PRE - Run Transform(s)
+[2023-10-12 02:28:31,243] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - PRE - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path']
+[2023-10-12 02:28:31,243] [299321] [MainThread] [INFO] (monailabel.transform.cache:80) - Ignore; Failed to load image from Cache; memory:True
+[2023-10-12 02:28:31,243] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (LoadFromCache): Time: 0.0002; 
+[2023-10-12 02:28:31,244] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - PRE - Run Transform(s)
+[2023-10-12 02:28:31,244] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - PRE - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path']
+[2023-10-12 02:28:31,254] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (LoadImaged): Time: 0.0098; image: torch.Size([240, 240, 1, 4])(torch.float32)
+[2023-10-12 02:28:31,255] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureChannelFirstd): Time: 0.0003; image: torch.Size([4, 240, 240, 1])(torch.float32)
+[2023-10-12 02:28:31,257] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Orientationd): Time: 0.0021; image: torch.Size([4, 240, 240, 1])(torch.float32)
+[2023-10-12 02:28:31,259] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (ScaleIntensityRanged): Time: 0.0015; image: torch.Size([4, 240, 240, 1])(torch.float32)
+[2023-10-12 02:28:31,261] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (CacheTransformDatad): Time: 0.0014; image: torch.Size([4, 240, 240, 1])(torch.float32)
+[2023-10-12 02:28:31,262] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (AddGuidanceFromPointsDeepEditd): Time: 0.0001; image: torch.Size([4, 240, 240, 1])(torch.float32)
+[2023-10-12 02:28:31,380] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Resized): Time: 0.1184; image: torch.Size([4, 128, 128, 128])(torch.float32)
+[2023-10-12 02:28:31,381] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (ResizeGuidanceMultipleLabelDeepEditd): Time: 0.0001; image: torch.Size([4, 128, 128, 128])(torch.float32)
+[2023-10-12 02:28:31,528] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (AddGuidanceSignalDeepEditd): Time: 0.1469; image: torch.Size([9, 128, 128, 128])(torch.float32)
+[2023-10-12 02:28:31,528] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureTyped): Time: 0.0002; image: torch.Size([9, 128, 128, 128])(torch.float32)
+[2023-10-12 02:28:31,528] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:480) - Inferer:: cpu => SimpleInferer => {}
+[2023-10-12 02:28:31,529] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:418) - Infer model path: /home/bbearce/Documents/monaiLabelExploration/apps/radiology/model/pretrained_deepedit_dynunet.pt
+[2023-10-12 02:28:37,603] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - INV - Run Transform(s)
+[2023-10-12 02:28:37,603] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - INV - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path', 'image_meta_dict', 'latencies', 'guidance', 'pred']
+[2023-10-12 02:28:37,657] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - INV - Transform (Resized): Time: 0.0536; image: torch.Size([8, 240, 240, 1])(torch.float32); pred: torch.Size([8, 128, 128, 128])(torch.float32)
+[2023-10-12 02:28:37,660] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - INV - Transform (Orientationd): Time: 0.0019; image: torch.Size([8, 240, 240, 1])(torch.float32); pred: torch.Size([8, 128, 128, 128])(torch.float32)
+[2023-10-12 02:28:37,673] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - POST - Run Transform(s)
+[2023-10-12 02:28:37,673] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - POST - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path', 'image_meta_dict', 'latencies', 'guidance', 'pred']
+[2023-10-12 02:28:37,674] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (EnsureTyped): Time: 0.0002; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([8, 240, 240, 1])(torch.float32)
+[2023-10-12 02:28:37,675] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (Activationsd): Time: 0.0009; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([8, 240, 240, 1])(torch.float32)
+[2023-10-12 02:28:37,682] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (AsDiscreted): Time: 0.0067; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([1, 240, 240, 1])(torch.float32)
+[2023-10-12 02:28:37,682] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (SqueezeDimd): Time: 0.0002; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([240, 240, 1])(torch.float32)
+[2023-10-12 02:28:37,683] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (ToNumpyd): Time: 0.0002; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: (240, 240, 1)(float32)
+[2023-10-12 02:28:37,683] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (Restored): Time: 0.0001; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: (240, 240, 1)(float32)
+[2023-10-12 02:28:37,683] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:580) - Writing Result...
+[2023-10-12 02:28:37,684] [299321] [MainThread] [INFO] (monailabel.transform.writer:196) - Result ext: .nii.gz; write_to_file: True; dtype: None
+[2023-10-12 02:28:37,687] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:332) - ++ Latencies => Total: 6.4457; Pre: 0.2870; Inferer: 6.0495; Invert: 0.0944; Post: 0.0109; Write: 0.0033
+[2023-10-12 02:28:37,687] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:356) - Result File: /tmp/tmp3elkyzbz.nii.gz
+[2023-10-12 02:28:37,687] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:357) - Result Json Keys: ['label_names', 'latencies']
+[2023-10-12 02:30:27,451] [299321] [MainThread] [INFO] (monailabel.endpoints.infer:161) - Infer Request: {'model': 'deepedit', 'image': '/tmp/tmpwck_yr8v.nii.gz'}
+[2023-10-12 02:30:27,451] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:277) - Infer Request (final): {'cache_transforms': True, 'cache_transforms_in_memory': True, 'cache_transforms_ttl': 300, 'device': 'cpu', 'model': 'deepedit', 'image': '/tmp/tmpwck_yr8v.nii.gz', 'description': 'A DeepEdit model for volumetric (3D) segmentation over 3D Images', 'save_label': False}
+[2023-10-12 02:30:27,452] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - PRE - Run Transform(s)
+[2023-10-12 02:30:27,452] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - PRE - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path']
+[2023-10-12 02:30:27,453] [299321] [MainThread] [INFO] (monailabel.transform.cache:80) - Ignore; Failed to load image from Cache; memory:True
+[2023-10-12 02:30:27,453] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (LoadFromCache): Time: 0.0001; 
+[2023-10-12 02:30:27,453] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - PRE - Run Transform(s)
+[2023-10-12 02:30:27,453] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - PRE - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path']
+[2023-10-12 02:30:28,184] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (LoadImaged): Time: 0.7303; image: torch.Size([240, 240, 155, 4])(torch.float32)
+[2023-10-12 02:30:28,185] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureChannelFirstd): Time: 0.0004; image: torch.Size([4, 240, 240, 155])(torch.float32)
+[2023-10-12 02:30:28,187] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Orientationd): Time: 0.002; image: torch.Size([4, 240, 240, 155])(torch.float32)
+[2023-10-12 02:30:28,354] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (ScaleIntensityRanged): Time: 0.1661; image: torch.Size([4, 240, 240, 155])(torch.float32)
+[2023-10-12 02:30:28,378] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (CacheTransformDatad): Time: 0.0239; image: torch.Size([4, 240, 240, 155])(torch.float32)
+[2023-10-12 02:30:28,378] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (AddGuidanceFromPointsDeepEditd): Time: 0.0001; image: torch.Size([4, 240, 240, 155])(torch.float32)
+[2023-10-12 02:30:28,537] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (Resized): Time: 0.1589; image: torch.Size([4, 128, 128, 128])(torch.float32)
+[2023-10-12 02:30:28,538] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (ResizeGuidanceMultipleLabelDeepEditd): Time: 0.0001; image: torch.Size([4, 128, 128, 128])(torch.float32)
+[2023-10-12 02:30:28,707] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (AddGuidanceSignalDeepEditd): Time: 0.1689; image: torch.Size([9, 128, 128, 128])(torch.float32)
+[2023-10-12 02:30:28,708] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureTyped): Time: 0.0002; image: torch.Size([9, 128, 128, 128])(torch.float32)
+[2023-10-12 02:30:28,708] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:480) - Inferer:: cpu => SimpleInferer => {}
+[2023-10-12 02:30:28,708] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:418) - Infer model path: /home/bbearce/Documents/monaiLabelExploration/apps/radiology/model/pretrained_deepedit_dynunet.pt
+[2023-10-12 02:30:35,396] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - INV - Run Transform(s)
+[2023-10-12 02:30:35,396] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - INV - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path', 'image_meta_dict', 'latencies', 'guidance', 'pred']
+[2023-10-12 02:30:36,247] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - INV - Transform (Resized): Time: 0.8498; image: torch.Size([8, 240, 240, 155])(torch.float32); pred: torch.Size([8, 128, 128, 128])(torch.float32)
+[2023-10-12 02:30:36,249] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - INV - Transform (Orientationd): Time: 0.002; image: torch.Size([8, 240, 240, 155])(torch.float32); pred: torch.Size([8, 128, 128, 128])(torch.float32)
+[2023-10-12 02:30:36,260] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - POST - Run Transform(s)
+[2023-10-12 02:30:36,261] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - POST - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path', 'image_meta_dict', 'latencies', 'guidance', 'pred']
+[2023-10-12 02:30:36,263] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (EnsureTyped): Time: 0.0005; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([8, 240, 240, 155])(torch.float32)
+[2023-10-12 02:30:36,349] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (Activationsd): Time: 0.0853; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([8, 240, 240, 155])(torch.float32)
+[2023-10-12 02:30:37,341] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (AsDiscreted): Time: 0.9924; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([1, 240, 240, 155])(torch.float32)
+[2023-10-12 02:30:37,342] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (SqueezeDimd): Time: 0.0002; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: torch.Size([240, 240, 155])(torch.float32)
+[2023-10-12 02:30:37,342] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (ToNumpyd): Time: 0.0002; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: (240, 240, 155)(float32)
+[2023-10-12 02:30:37,343] [299321] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - POST - Transform (Restored): Time: 0.0001; image: torch.Size([9, 128, 128, 128])(torch.float32); pred: (240, 240, 155)(float32)
+[2023-10-12 02:30:37,364] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:580) - Writing Result...
+[2023-10-12 02:30:37,365] [299321] [MainThread] [INFO] (monailabel.transform.writer:196) - Result ext: .nii.gz; write_to_file: True; dtype: None
+[2023-10-12 02:30:37,480] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:332) - ++ Latencies => Total: 10.0287; Pre: 1.2562; Inferer: 6.6639; Invert: 0.8885; Post: 1.1040; Write: 0.1156
+[2023-10-12 02:30:37,480] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:356) - Result File: /tmp/tmpbykdol0s.nii.gz
+[2023-10-12 02:30:37,480] [299321] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:357) - Result Json Keys: ['label_names', 'latencies']
+[2023-10-12 15:08:25,226] [387925] [MainThread] [INFO] (monailabel.interfaces.utils.app:37) - Initializing App from: /home/bbearce/Documents/monaiLabelExploration/apps/radiology; studies: /home/bbearce/Documents/monaiLabelExploration/datasets/Task01_BrainTumour/imagesTr; conf: {'models': 'deepedit'}
+[2023-10-12 15:11:20,321] [389361] [MainThread] [INFO] (monailabel.interfaces.utils.app:37) - Initializing App from: /home/bbearce/Documents/monaiLabelExploration/apps/radiology; studies: /home/bbearce/Documents/monaiLabelExploration/datasets/Task01_BrainTumour/imagesTr; conf: {'models': 'deepedit'}
+[2023-10-12 15:11:23,967] [389361] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for MONAILabelApp Found: <class 'main.MyApp'>
+[2023-10-12 15:11:23,980] [389361] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_spleen.SegmentationSpleen'>
+[2023-10-12 15:11:23,982] [389361] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_vertebra.LocalizationVertebra'>
+[2023-10-12 15:11:23,984] [389361] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_2d.Deepgrow2D'>
+[2023-10-12 15:11:23,986] [389361] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_spine.LocalizationSpine'>
+[2023-10-12 15:11:23,988] [389361] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepedit.DeepEdit'>
+[2023-10-12 15:11:23,989] [389361] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_3d.Deepgrow3D'>
+[2023-10-12 15:11:23,990] [389361] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation.Segmentation'>
+[2023-10-12 15:11:23,991] [389361] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_vertebra.SegmentationVertebra'>
+[2023-10-12 15:11:23,992] [389361] [MainThread] [INFO] (main:93) - +++ Adding Model: deepedit => lib.configs.deepedit.DeepEdit
+[2023-10-12 15:11:25,262] [389361] [MainThread] [INFO] (lib.configs.deepedit:141) - EPISTEMIC Enabled: False; Samples: 5
+[2023-10-12 15:11:25,262] [389361] [MainThread] [INFO] (main:96) - +++ Using Models: ['deepedit']
+[2023-10-12 15:11:25,262] [389361] [MainThread] [INFO] (monailabel.interfaces.app:135) - Init Datastore for: /home/bbearce/Documents/monaiLabelExploration/datasets/Task01_BrainTumour/imagesTr
+[2023-10-12 15:11:25,263] [389361] [MainThread] [INFO] (monailabel.datastore.local:130) - Auto Reload: True; Extensions: ['*.nii.gz', '*.nii', '*.nrrd', '*.jpg', '*.png', '*.tif', '*.svs', '*.xml']
+[2023-10-12 15:11:25,367] [389361] [MainThread] [INFO] (monailabel.datastore.local:577) - Invalidate count: 0
+[2023-10-12 15:11:25,368] [389361] [MainThread] [INFO] (monailabel.datastore.local:151) - Start observing external modifications on datastore (AUTO RELOAD)
+[2023-10-12 15:11:26,030] [389361] [MainThread] [INFO] (main:126) - +++ Adding Inferer:: deepedit => <lib.infers.deepedit.DeepEdit object at 0x7f4cf1564040>
+[2023-10-12 15:11:26,031] [389361] [MainThread] [INFO] (main:126) - +++ Adding Inferer:: deepedit_seg => <lib.infers.deepedit.DeepEdit object at 0x7f4ce3f31810>
+[2023-10-12 15:11:26,031] [389361] [MainThread] [INFO] (main:191) - {'deepedit': <lib.infers.deepedit.DeepEdit object at 0x7f4cf1564040>, 'deepedit_seg': <lib.infers.deepedit.DeepEdit object at 0x7f4ce3f31810>, 'Histogram+GraphCut': <monailabel.scribbles.infer.HistogramBasedGraphCut object at 0x7f4ce3f31870>, 'GMM+GraphCut': <monailabel.scribbles.infer.GMMBasedGraphCut object at 0x7f4ce3f318a0>}
+[2023-10-12 15:11:26,032] [389361] [MainThread] [INFO] (main:206) - +++ Adding Trainer:: deepedit => <lib.trainers.deepedit.DeepEdit object at 0x7f4ce3f31930>
+[2023-10-12 15:11:26,033] [389361] [MainThread] [INFO] (monailabel.utils.sessions:51) - Session Path: /home/bbearce/.cache/monailabel/sessions
+[2023-10-12 15:11:26,033] [389361] [MainThread] [INFO] (monailabel.utils.sessions:52) - Session Expiry (max): 3600
+[2023-10-12 15:11:26,034] [389361] [MainThread] [INFO] (monailabel.interfaces.app:469) - App Init - completed
+[2023-10-12 15:11:26,035] [389361] [MainThread] [INFO] (timeloop:60) - Starting Timeloop..
+[2023-10-12 15:11:26,036] [389361] [MainThread] [INFO] (timeloop:42) - Registered job <function MONAILabelApp.on_init_complete.<locals>.run_scheduler at 0x7f4cf155d630>
+[2023-10-12 15:11:26,036] [389361] [MainThread] [INFO] (timeloop:63) - Timeloop now started. Jobs will run based on the interval set
+[2023-10-12 15:12:53,453] [389773] [MainThread] [INFO] (monailabel.interfaces.utils.app:37) - Initializing App from: /home/bbearce/Documents/monaiLabelExploration/apps/radiology; studies: /home/bbearce/Documents/monaiLabelExploration/datasets/Task01_BrainTumour/imagesTr; conf: {'models': 'mednistclassifier'}
+[2023-10-12 15:12:56,695] [389773] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for MONAILabelApp Found: <class 'main.MyApp'>
+[2023-10-12 15:12:56,707] [389773] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_spleen.SegmentationSpleen'>
+[2023-10-12 15:12:56,708] [389773] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_vertebra.LocalizationVertebra'>
+[2023-10-12 15:12:56,709] [389773] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_2d.Deepgrow2D'>
+[2023-10-12 15:12:56,710] [389773] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_spine.LocalizationSpine'>
+[2023-10-12 15:12:56,711] [389773] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepedit.DeepEdit'>
+[2023-10-12 15:12:56,712] [389773] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_3d.Deepgrow3D'>
+[2023-10-12 15:12:56,714] [389773] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation.Segmentation'>
+[2023-10-12 15:12:56,715] [389773] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_vertebra.SegmentationVertebra'>
+[2023-10-12 16:24:51,913] [394980] [MainThread] [INFO] (monailabel.interfaces.utils.app:37) - Initializing App from: /home/bbearce/Documents/monaiLabelExploration/apps/radiology; studies: /home/bbearce/Documents/monaiLabelExploration/datasets/Task01_BrainTumour/imagesTr; conf: {'models': 'mednist'}
+[2023-10-12 16:24:56,876] [394980] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for MONAILabelApp Found: <class 'main.MyApp'>
+[2023-10-12 16:24:56,916] [394980] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.mednist.Mednist'>
+[2023-10-12 16:24:56,919] [394980] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_spleen.SegmentationSpleen'>
+[2023-10-12 16:24:56,921] [394980] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_vertebra.LocalizationVertebra'>
+[2023-10-12 16:24:56,926] [394980] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_2d.Deepgrow2D'>
+[2023-10-12 16:24:56,928] [394980] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_spine.LocalizationSpine'>
+[2023-10-12 16:24:56,931] [394980] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepedit.DeepEdit'>
+[2023-10-12 16:24:56,933] [394980] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_3d.Deepgrow3D'>
+[2023-10-12 16:24:56,936] [394980] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation.Segmentation'>
+[2023-10-12 16:24:56,937] [394980] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_vertebra.SegmentationVertebra'>
+[2023-10-12 16:24:56,938] [394980] [MainThread] [INFO] (main:93) - +++ Adding Model: mednist => lib.configs.mednist.Mednist
+[2023-10-12 16:24:57,711] [394980] [MainThread] [INFO] (main:96) - +++ Using Models: ['mednist']
+[2023-10-12 16:24:57,712] [394980] [MainThread] [INFO] (monailabel.interfaces.app:135) - Init Datastore for: /home/bbearce/Documents/monaiLabelExploration/datasets/Task01_BrainTumour/imagesTr
+[2023-10-12 16:24:57,712] [394980] [MainThread] [INFO] (monailabel.datastore.local:130) - Auto Reload: True; Extensions: ['*.nii.gz', '*.nii', '*.nrrd', '*.jpg', '*.png', '*.tif', '*.svs', '*.xml']
+[2023-10-12 16:24:57,897] [394980] [MainThread] [INFO] (monailabel.datastore.local:577) - Invalidate count: 0
+[2023-10-12 16:24:57,897] [394980] [MainThread] [INFO] (monailabel.datastore.local:151) - Start observing external modifications on datastore (AUTO RELOAD)
+[2023-10-12 16:25:59,585] [395279] [MainThread] [INFO] (monailabel.interfaces.utils.app:37) - Initializing App from: /home/bbearce/Documents/monaiLabelExploration/apps/radiology; studies: /home/bbearce/Documents/monaiLabelExploration/datasets/Task01_BrainTumour/imagesTr; conf: {'models': 'mednist'}
+[2023-10-12 16:26:03,969] [395279] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for MONAILabelApp Found: <class 'main.MyApp'>
+[2023-10-12 16:26:03,979] [395279] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.mednist.Mednist'>
+[2023-10-12 16:26:03,980] [395279] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_spleen.SegmentationSpleen'>
+[2023-10-12 16:26:03,981] [395279] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_vertebra.LocalizationVertebra'>
+[2023-10-12 16:26:03,981] [395279] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_2d.Deepgrow2D'>
+[2023-10-12 16:26:03,982] [395279] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_spine.LocalizationSpine'>
+[2023-10-12 16:26:03,983] [395279] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepedit.DeepEdit'>
+[2023-10-12 16:26:03,984] [395279] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_3d.Deepgrow3D'>
+[2023-10-12 16:26:03,985] [395279] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation.Segmentation'>
+[2023-10-12 16:26:03,986] [395279] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_vertebra.SegmentationVertebra'>
+[2023-10-12 16:26:03,986] [395279] [MainThread] [INFO] (main:93) - +++ Adding Model: mednist => lib.configs.mednist.Mednist
+[2023-10-12 16:26:04,640] [395279] [MainThread] [INFO] (main:96) - +++ Using Models: ['mednist']
+[2023-10-12 16:26:04,640] [395279] [MainThread] [INFO] (monailabel.interfaces.app:135) - Init Datastore for: /home/bbearce/Documents/monaiLabelExploration/datasets/Task01_BrainTumour/imagesTr
+[2023-10-12 16:26:04,641] [395279] [MainThread] [INFO] (monailabel.datastore.local:130) - Auto Reload: True; Extensions: ['*.nii.gz', '*.nii', '*.nrrd', '*.jpg', '*.png', '*.tif', '*.svs', '*.xml']
+[2023-10-12 16:26:04,738] [395279] [MainThread] [INFO] (monailabel.datastore.local:577) - Invalidate count: 0
+[2023-10-12 16:26:04,738] [395279] [MainThread] [INFO] (monailabel.datastore.local:151) - Start observing external modifications on datastore (AUTO RELOAD)
+[2023-10-12 16:26:05,598] [395279] [MainThread] [INFO] (main:126) - +++ Adding Inferer:: mednist => <lib.infers.mednist.Mednist object at 0x7f83e37725f0>
+[2023-10-12 16:26:05,599] [395279] [MainThread] [INFO] (main:191) - {'mednist': <lib.infers.mednist.Mednist object at 0x7f83e37725f0>, 'Histogram+GraphCut': <monailabel.scribbles.infer.HistogramBasedGraphCut object at 0x7f83e47500d0>, 'GMM+GraphCut': <monailabel.scribbles.infer.GMMBasedGraphCut object at 0x7f83e3502d10>}
+[2023-10-12 16:26:05,599] [395279] [MainThread] [INFO] (monailabel.utils.sessions:51) - Session Path: /home/bbearce/.cache/monailabel/sessions
+[2023-10-12 16:26:05,600] [395279] [MainThread] [INFO] (monailabel.utils.sessions:52) - Session Expiry (max): 3600
+[2023-10-12 16:26:05,600] [395279] [MainThread] [INFO] (monailabel.interfaces.app:469) - App Init - completed
+[2023-10-12 16:26:05,601] [395279] [MainThread] [INFO] (timeloop:60) - Starting Timeloop..
+[2023-10-12 16:26:05,601] [395279] [MainThread] [INFO] (timeloop:42) - Registered job <function MONAILabelApp.on_init_complete.<locals>.run_scheduler at 0x7f83e4749870>
+[2023-10-12 16:26:05,601] [395279] [MainThread] [INFO] (timeloop:63) - Timeloop now started. Jobs will run based on the interval set
+[2023-10-12 16:28:31,978] [395664] [MainThread] [INFO] (monailabel.interfaces.utils.app:37) - Initializing App from: /home/bbearce/Documents/monaiLabelExploration/apps/radiology; studies: /home/bbearce/Documents/monaiLabelExploration/datasets/Task01_BrainTumour/imagesTr; conf: {'models': 'mednist'}
+[2023-10-12 16:28:36,949] [395664] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for MONAILabelApp Found: <class 'main.MyApp'>
+[2023-10-12 16:28:36,969] [395664] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.mednist.Mednist'>
+[2023-10-12 16:28:36,971] [395664] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_spleen.SegmentationSpleen'>
+[2023-10-12 16:28:36,973] [395664] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_vertebra.LocalizationVertebra'>
+[2023-10-12 16:28:36,974] [395664] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_2d.Deepgrow2D'>
+[2023-10-12 16:28:36,977] [395664] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.localization_spine.LocalizationSpine'>
+[2023-10-12 16:28:36,981] [395664] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepedit.DeepEdit'>
+[2023-10-12 16:28:36,983] [395664] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.deepgrow_3d.Deepgrow3D'>
+[2023-10-12 16:28:36,986] [395664] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation.Segmentation'>
+[2023-10-12 16:28:36,990] [395664] [MainThread] [INFO] (monailabel.utils.others.class_utils:57) - Subclass for TaskConfig Found: <class 'lib.configs.segmentation_vertebra.SegmentationVertebra'>
+[2023-10-12 16:28:36,991] [395664] [MainThread] [INFO] (main:93) - +++ Adding Model: mednist => lib.configs.mednist.Mednist
+[2023-10-12 16:28:37,517] [395664] [MainThread] [INFO] (main:96) - +++ Using Models: ['mednist']
+[2023-10-12 16:28:37,517] [395664] [MainThread] [INFO] (monailabel.interfaces.app:135) - Init Datastore for: /home/bbearce/Documents/monaiLabelExploration/datasets/Task01_BrainTumour/imagesTr
+[2023-10-12 16:28:37,518] [395664] [MainThread] [INFO] (monailabel.datastore.local:130) - Auto Reload: True; Extensions: ['*.nii.gz', '*.nii', '*.nrrd', '*.jpg', '*.png', '*.tif', '*.svs', '*.xml']
+[2023-10-12 16:28:37,631] [395664] [MainThread] [INFO] (monailabel.datastore.local:577) - Invalidate count: 0
+[2023-10-12 16:28:37,631] [395664] [MainThread] [INFO] (monailabel.datastore.local:151) - Start observing external modifications on datastore (AUTO RELOAD)
+[2023-10-12 16:28:38,525] [395664] [MainThread] [INFO] (main:126) - +++ Adding Inferer:: mednist => <lib.infers.mednist.Mednist object at 0x7f02eb74e5f0>
+[2023-10-12 16:28:38,525] [395664] [MainThread] [INFO] (main:191) - {'mednist': <lib.infers.mednist.Mednist object at 0x7f02eb74e5f0>, 'Histogram+GraphCut': <monailabel.scribbles.infer.HistogramBasedGraphCut object at 0x7f02ec72c0d0>, 'GMM+GraphCut': <monailabel.scribbles.infer.GMMBasedGraphCut object at 0x7f02eb6dad10>}
+[2023-10-12 16:28:38,525] [395664] [MainThread] [INFO] (monailabel.utils.sessions:51) - Session Path: /home/bbearce/.cache/monailabel/sessions
+[2023-10-12 16:28:38,526] [395664] [MainThread] [INFO] (monailabel.utils.sessions:52) - Session Expiry (max): 3600
+[2023-10-12 16:28:38,526] [395664] [MainThread] [INFO] (monailabel.interfaces.app:469) - App Init - completed
+[2023-10-12 16:28:38,526] [395664] [MainThread] [INFO] (timeloop:60) - Starting Timeloop..
+[2023-10-12 16:28:38,527] [395664] [MainThread] [INFO] (timeloop:42) - Registered job <function MONAILabelApp.on_init_complete.<locals>.run_scheduler at 0x7f02ec725870>
+[2023-10-12 16:28:38,527] [395664] [MainThread] [INFO] (timeloop:63) - Timeloop now started. Jobs will run based on the interval set
+[2023-10-12 16:30:04,972] [395664] [MainThread] [INFO] (monailabel.endpoints.infer:161) - Infer Request: {'model': 'mednist', 'image': '/tmp/tmpdcgwmcnm.jpeg'}
+[2023-10-12 16:30:04,972] [395664] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:277) - Infer Request (final): {'cache_transforms': True, 'cache_transforms_in_memory': True, 'cache_transforms_ttl': 300, 'device': 'cpu', 'model': 'mednist', 'image': '/tmp/tmpdcgwmcnm.jpeg', 'description': 'Mednist description', 'save_label': False}
+[2023-10-12 16:30:04,974] [395664] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - PRE - Run Transform(s)
+[2023-10-12 16:30:04,974] [395664] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - PRE - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path']
+[2023-10-12 16:30:04,996] [395664] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (LoadImaged): Time: 0.0216; image: torch.Size([64, 64])(torch.float32)
+[2023-10-12 16:30:05,000] [395664] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (EnsureChannelFirstd): Time: 0.0032; image: torch.Size([1, 64, 64])(torch.float32)
+[2023-10-12 16:30:05,019] [395664] [MainThread] [INFO] (monailabel.interfaces.utils.transform:122) - PRE - Transform (ScaleIntensityd): Time: 0.0181; image: torch.Size([1, 64, 64])(torch.float32)
+[2023-10-12 16:30:05,020] [395664] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:480) - Inferer:: cpu => SimpleInferer => {}
+[2023-10-12 16:30:05,021] [395664] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:418) - Infer model path: /home/bbearce/Documents/monaiLabelExploration/apps/radiology/model/pretrained_mednist.pt
+[2023-10-12 16:30:05,550] [395664] [MainThread] [INFO] (monailabel.interfaces.utils.transform:76) - POST - Run Transform(s)
+[2023-10-12 16:30:05,551] [395664] [MainThread] [INFO] (monailabel.interfaces.utils.transform:77) - POST - Input Keys: ['cache_transforms', 'cache_transforms_in_memory', 'cache_transforms_ttl', 'device', 'model', 'image', 'description', 'save_label', 'image_path', 'latencies', 'pred']
+[2023-10-12 16:30:05,551] [395664] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:580) - Writing Result...
+[2023-10-12 16:30:05,553] [395664] [MainThread] [INFO] (monailabel.transform.writer:256) - [ 1.8630764  -0.62983334 -0.5690193  -0.15074892 -0.39861855 -0.5673793 ]
+[2023-10-12 16:30:05,555] [395664] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:332) - ++ Latencies => Total: 0.5831; Pre: 0.0474; Inferer: 0.5298; Invert: 0.0000; Post: 0.0009; Write: 0.0044
+[2023-10-12 16:30:05,556] [395664] [MainThread] [INFO] (monailabel.tasks.infer.basic_infer:357) - Result Json Keys: ['prediction', 'label_names', 'latencies']

@@ -1,0 +1,35 @@
+
+max_epochs: 25
+
+dataset:
+  _target_: MedNISTDataset
+  root_dir: '@root_dir'
+  transform: '@transform'
+  section: training
+  download: true
+
+train_dl:
+  _target_: DataLoader
+  dataset: '@dataset'
+  batch_size: 512
+  shuffle: true
+  num_workers: 4
+
+trainer:
+    _target_: SupervisedTrainer
+    device: '@device'
+    max_epochs: '@max_epochs'
+    train_data_loader: '@train_dl'
+    network: '@net'
+    optimizer: 
+      _target_: torch.optim.Adam
+      params: '$@net.parameters()'
+      lr: 0.00001  # learning rate set slow so that you can see network improvement over epochs
+    loss_function: 
+      _target_: torch.nn.CrossEntropyLoss
+    inferer: 
+      _target_: SimpleInferer
+
+train:
+- '$@trainer.run()'
+- '$torch.jit.script(@net).save(''model.ts'')'

@@ -1,0 +1,5 @@
+
+area: '$@width*@height'
+
+test:
+- '$print("Area", @area)'

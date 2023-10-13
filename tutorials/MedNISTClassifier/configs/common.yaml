@@ -1,0 +1,36 @@
+# only need to import torch right now
+imports: 
+- $import torch
+
+# define a default root directory value, this can overridden on the command line
+root_dir: "."
+
+# define a device for the network
+# device: '$torch.device(''cuda:0'')'
+device: '$torch.device(''cpu'')'
+
+# store the class names for inference later
+class_names: [AbdomenCT, BreastMRI, CXR, ChestCT, Hand, HeadCT]
+
+# define the network separately, don't need to refer to MONAI types by name or import MONAI
+network_def:
+  _target_: densenet121
+  spatial_dims: 2
+  in_channels: 1
+  out_channels: 6
+
+# define the network to be the given definition moved to the device
+net: '$@network_def.to(@device)'
+
+# define a transform sequence by instantiating a Compose instance with a transform sequence
+transform:
+  _target_: Compose
+  transforms:
+  - _target_: LoadImaged
+    keys: 'image'
+    image_only: true
+  - _target_: EnsureChannelFirstd
+    keys: 'image'
+  - _target_: ScaleIntensityd
+    keys: 'image'
+    

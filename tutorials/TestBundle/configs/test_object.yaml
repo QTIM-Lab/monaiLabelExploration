@@ -1,0 +1,13 @@
+
+datadicts: '$[{i: (i * i)} for i in range(10)]'  # create a fake dataset as a list of dicts
+
+test_dataset:  # creates an instance of an object because _target_ is present
+  _target_: Dataset  # name of type to create is monai.data.Dataset (loaded implicitly from MONAI)
+  data: '@datadicts'  # argument data provided by a definition
+  transform: '$None'  # argument transform provided by a Python expression
+
+test:
+- '$print("Dataset", @test_dataset)'
+- '$print("Size", len(@test_dataset))'
+- '$print("Transform member", @test_dataset.transform)'
+- '$print("Values", list(@test_dataset))'

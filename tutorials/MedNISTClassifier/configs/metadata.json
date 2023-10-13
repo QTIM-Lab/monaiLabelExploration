@@ -1,0 +1,54 @@
+{
+    "version": "0.0.1",
+    "changelog": {
+        "0.0.1": "Initial version"
+    },
+    "monai_version": "1.2.0",
+    "pytorch_version": "2.0.0",
+    "numpy_version": "1.23.5",
+    "optional_packages_version": {},
+    "name": "MedNISTClassifier",
+    "task": "MedNIST Classification Network",
+    "description": "This is a demo network for classifying MedNIST images by type/modality",
+    "authors": "Your Name Here",
+    "copyright": "Copyright (c) Your Name Here",
+    "data_source": "MedNIST dataset kindly made available by Dr. Bradley J. Erickson M.D., Ph.D. (Department of Radiology, Mayo Clinic)",
+    "data_type": "jpeg",
+    "intended_use": "This is suitable for demonstration only",
+    "network_data_format": {
+        "inputs": {
+            "image": {
+                "type": "image",
+                "format": "magnitude",
+                "modality": "any",
+                "num_channels": 1,
+                "spatial_shape": [64, 64],
+                "dtype": "float32",
+                "value_range": [0, 1],
+                "is_patch_data": false,
+                "channel_def": {
+                    "0": "image"
+                }
+            }
+        },
+        "outputs": {
+            "pred": {
+                "type": "probabilities",
+                "format": "classes",
+                "num_channels": 6,
+                "spatial_shape": [6],
+                "dtype": "float32",
+                "value_range": [0, 1],
+                "is_patch_data": false,
+                "channel_def": {
+                    "0": "AbdomenCT",
+                    "1": "BreastMRI",
+                    "2": "CXR",
+                    "3": "ChestCT",
+                    "4": "Hand",
+                    "5": "HeadCT"
+                }
+            }
+        }
+    }
+}

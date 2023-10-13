@@ -1,0 +1,8 @@
+
+shape: [8, 8]
+area: '$@shape[0]*@shape[1]'
+
+test:
+- '$print("Height", @shape[0])'
+- '$print("Width", @shape[1])'
+- '$print("Area", @area)'
